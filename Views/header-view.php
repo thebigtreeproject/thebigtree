@@ -9,7 +9,7 @@
 <body>
 <header>
 	<div class="header container">
-		<div id="nav-icon2">
+		<div id="hamburger-icon">
 		  <span></span>
 		  <span></span>
 		  <span></span>

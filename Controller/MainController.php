@@ -2,6 +2,9 @@
 
 Class MainController
 {
+	function __construct(){
+		//check the user to be able to use the pages;
+	}
 	public function home()
 	{
 		/// home page

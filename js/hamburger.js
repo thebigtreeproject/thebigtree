@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#nav-icon2').click(function(){
+	$('#hamburger-icon').click(function(){
 		$(this).toggleClass('open');
 	});
 });

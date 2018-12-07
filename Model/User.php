@@ -1,9 +1,23 @@
 <?php
-Class Member
+Class User
 {
 	static function saveNewMember($arrMemberInfo)
 	{
-		//insert the SQL to SAVE NEW MEMBER here uses $arrMemberInfo[''] instead $_POST['']
+		$sql = "INSERT INTO users (
+				id, 
+				strFirstName,
+				strLastName,
+				strEmail,
+				strZipCode,
+				strAddress,
+				strPassword)
+			VALUES (
+				'".utf8_encode($_POST['strFirstName'])."', 
+				'".utf8_encode($_POST['strLastname'])."',
+				'".utf8_encode($_POST['strEmail'])."',
+				'".utf8_encode($_POST['strZipCode'])."',
+				'".utf8_encode($_POST['strAdress'])."',
+				'".utf8_encode($_POST['strPassword'])."')";
 		DB::con()->runSQL("insertNew", $sql);			
 	}
 	static function checkPassword(){

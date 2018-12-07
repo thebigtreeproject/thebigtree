@@ -15,7 +15,7 @@
 		<script src="js/addAndDeleteCart.js"></script>
 		<script src="js/stripslider.js"></script>
 		<script src="js/showClickedPhoto.js"></script>
-		<script src="js/responsive.js"></script>
+		<script src="js/hamburger.js"></script>
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMaFf1MASfiqfZ74bRkaGWKbeEIcUIVOU&callback=initMap"></script>
 	</body>
 </html>
