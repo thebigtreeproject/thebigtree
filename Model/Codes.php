@@ -31,7 +31,7 @@ class Code {
             saveCode();
         }
         else if(!$codeInUse && isset($_SESSION['nCondoID'])){
-            $sql = "INSERT INTO codes(strCode, nCondoID, bInUse) VALUES ('".$newCode."', '".$_SESSION['nCondoID']."', 0)";
+            $sql = "INSERT INTO codes(strCode, nUserID) VALUES ('".$newCode."', '".$_SESSION['userInfo']['id']."')";
             $nCodeID = DB::con()->runSQL("insertNew", $sql);
 
             return $newCode;

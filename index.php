@@ -5,14 +5,14 @@ include("Model/User.php");
 include("Controller/MainController.php");
 include("Controller/PagesController.php");
 include("Controller/FormsController.php");
+
 session_start();
 
-$controller = (isset($_GET["controller"]))?$_GET["controller"]:"main";
-$action = (isset($_GET["action"]))	?$_GET["action"]:"test";
+$route = explode('.', $_GET['route']);
+$mainAction = $route[0];
+$action = $route[1];
 
-$controllerName = ucfirst($controller)."Controller"; // creates MainController
-$oController = new $controllerName(); // new MainController();
-
-$oController->$action();
+$oController = new MainController(); // new MainController();
+$oController->$mainAction($action);
 
 ?>

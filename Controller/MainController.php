@@ -4,6 +4,7 @@ Class MainController
 {
 	function __construct(){
 		//check the user to be able to use the pages;
+		$userLoged = true;
 	}
 	public function home()
 	{
@@ -69,7 +70,7 @@ Class MainController
 	}
 	public function register()
 	{
-		$content = $this->loadView("register");
+		$content = $this->loadView("userregistration");
 		include("Views/publiclayout-view.php");
 	}
 
@@ -128,7 +129,7 @@ Class MainController
 	}
 	
 	public function test(){
-		$content = $this->loadView("userregistration");
+		$content = $this->loadView('userregistration');
 		include("Views/publiclayout-view.php");
 	}
 }
