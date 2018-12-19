@@ -9,14 +9,27 @@
 <body>
 <header>
 	<div class="header container">
-		<div id="hamburger-icon">
-		  <span></span>
-		  <span></span>
-		  <span></span>
-		  <span></span>
-		  <span></span>
-		  <span></span>
+		<div>
+			<img src="imgs/logo.png" alt="The Big Tree Logo">
 		</div>
-		HERE GOES THE CODE FOR THE HEADER
+		<div id="nav">
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Testimonials</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="hamburger-icon">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 	</div>
 </header>

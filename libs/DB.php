@@ -1,6 +1,6 @@
 <?php
 
-Class DB{
+class DB{
 	static function con()
 	{
 		$oConnection = new Connection();

@@ -1,6 +1,6 @@
 		<footer>
 			<div class="footer container">
-				HERE GOES THE CODE FOR THE HEADER
+				HERE GOES THE CODE FOR THE FOOTER
 			</div><!--footer-->
 		</footer>
 

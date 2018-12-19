@@ -124,7 +124,8 @@ div#hamburger-icon.open span:nth-child(6) {
 }
 /* ENDO of hamburger style */
 .header{
-	height: 50px;
+	position: relative;
+	height: auto;
 }
 .content {
 	display: table-row-group;

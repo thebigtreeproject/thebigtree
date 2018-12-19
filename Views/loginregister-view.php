@@ -1,4 +1,4 @@
-<form class="user-registration" method="post" action="index.php?controller=" onsubmit="return validate()">
+<form class="user-registration" method="post" action="index.php?route=user.save" onsubmit="return validate()">
 	<div class="registerForm">
 		<label class="required">First Name</label>
 		<input type="text" name="strFirstName" id="firstName" placeholder="ex. Saphyra">

@@ -8,7 +8,7 @@
 			<p>
 			Here at Floppy Dawg, we are all dog lovers. With our furry friends in mind, we’ve created the most comfortable and stylish dog beds and crate covers possible, each one designed with your pup in mind. Our products are guaranteed to be high quality at an affordable price. Because your best friend deserves the best!
 			</p>
-			<a href="index.php?action=products" class="btn btn-primary">View all our Products</a>
+			<a href="index.php?route=pages.services" class="btn btn-primary">View all our Products</a>
 		</div><!--ABOUTTEXT-->	
 	</div><!--aboutGrid-->
 </div><!--aboutContainer-->
