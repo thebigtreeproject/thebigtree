@@ -2,12 +2,12 @@
 
 	class MainController
 	{
+		var $userLoged = '';
 		function __construct()
 		{
 			//check the user to be able to use the pages;
-			$userLoged = true;
+			$this->userLoged = true;
 		}
-
 		public function pages($action)
 		{
 			$oPage = new PagesController;
@@ -30,8 +30,9 @@
 
 		public function test()
 		{
-			$content = $this->loadView('userregistration');
-			include("Views/publiclayout-view.php");
+			echo $this->userLoged;
+//			$content = $this->loadView('userregistration');
+//			include("Views/publiclayout-view.php");
 		}
 	}
 
