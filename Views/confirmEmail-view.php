@@ -5,4 +5,4 @@
 	<p>If this message should not be sent to you, please ignore it!</p>
 
 	<a href="?route=user.activate&cd=<?=$code?>.<?=$_SESSION['userInfo']['id']?>">Confirm Email</a>
-</div>
+</div> 

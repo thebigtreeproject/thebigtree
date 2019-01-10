@@ -38,7 +38,7 @@ header{
 
 /* hamburger style */
 div#hamburger-icon {
-  display: inline-block;
+  display: none;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -176,9 +176,11 @@ div#hamburger-icon.open span:nth-child(6) {
 /*************FOOTER***************/
 footer {
 	display: table-footer-group;
-	background: pink;
+	background: #06ff95;
 }
 .footer{
 	height: 50px;
 }
 /**********END OF FOOTER*************/
+
+

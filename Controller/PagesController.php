@@ -15,7 +15,9 @@
 		public function home()
 		{
 			// home page
-			$content = '<h1> Home Page </h1>';
+			$content = $this->loadView("hero");
+			$content .= '<h1> Home Page </h1>';
+			$content .= $this->loadView("contact");
 			include("Views/publiclayout-view.php");
 		}
 
@@ -64,7 +66,12 @@
 			$content = $this->loadView("loginregister");
 			include("Views/publiclayout-view.php");
 		}
-
+		
+		public function registerservice(){
+			$arrServices = Category::getAllCategories();
+			$content = $this->loadView("registerservice", $arrServices);
+			include("Views/publiclayout-view.php");
+		}
 
 		public function editprofile()
 		{	

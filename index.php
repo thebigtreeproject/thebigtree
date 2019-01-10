@@ -2,15 +2,19 @@
 include("../../bigtree-con/dbqueries.php");
 include("libs/DB.php");
 include("Model/Codes.php");
+include("Model/Category.php");
 include("Model/User.php");
 include("Model/Email.php");
+include("Model/Companies.php");
+include("Model/Company.php");
 include("Controller/MainController.php");
 include("Controller/PagesController.php");
 include("Controller/FormsController.php");
 
 session_start();
 
-$route = explode('.', isset($_GET['route'])?$_GET['route']:'pages.home');
+$routeComponents = isset($_GET['route'])?$_GET['route']:'pages.home';
+$route = explode('.', $routeComponents);
 $mainAction = strtolower($route[0]);
 $action = isset($route[1])?strtolower($route[1]):'';
 

@@ -27,13 +27,6 @@
 			}
 			
 		}
-
-		public function test()
-		{
-			echo $this->userLoged;
-//			$content = $this->loadView('userregistration');
-//			include("Views/publiclayout-view.php");
-		}
 	}
 
 ?>
