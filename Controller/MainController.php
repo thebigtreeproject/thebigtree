@@ -27,6 +27,20 @@
 			}
 			
 		}
+		public function company($action)
+		{
+			switch ($action){
+				case 'save':
+					Company::save();
+					break;
+				case 'activate':
+					Company::confirm();
+					break;
+				default:
+					break;
+			}
+			
+		}
 	}
 
 ?>

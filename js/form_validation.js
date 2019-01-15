@@ -3,11 +3,27 @@ $(function(){
 		let missing = 0;
 		$('.required').each(function(){
 			const field = $(this).next();
-			if(field.val()){
-				field.css('background', '#fff');
-			} else {
-				field.css('background', 'rgb( 255, 0, 0 , 0.3)');
-				missing = missing +1;
+			if(field.is("input") || field.is("textarea")){
+				if(field.val()){
+					field.removeClass('empty');
+				} else {
+					field.addClass('empty');
+					missing++;
+				}
+			}
+			else if(field.is("div")){
+				let checked = 0;
+				field.children().each( function() {
+					if(!$(this).is("input:checked")){
+						field.addClass('empty');
+					}
+					else{
+						checked++;
+					}
+				});
+				if(checked === 0){
+					missing++;
+				}
 			}
 			console.log(missing);
 		});
@@ -17,13 +33,5 @@ $(function(){
 		} else {
 			return false;
 		}
-	});
-	$('#autoFill').change(function(){
-		if($(this).prop("checked")){
-		   $('#shippingfirstName').val($('#billingfirstName').val());
-		   $('#shippinglastname').val($('#billinglastname').val());
-		   $('#shippingstreetAdress').val($('#billingstreetAdress').val());
-		   $('#shippingzipCode').val($('#billingzipCode').val());
-		}			 
 	});
 });

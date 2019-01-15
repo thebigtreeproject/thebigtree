@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../../bigtree-con/dbqueries.php");
 include("libs/DB.php");
 include("Model/Codes.php");
@@ -10,8 +11,6 @@ include("Model/Company.php");
 include("Controller/MainController.php");
 include("Controller/PagesController.php");
 include("Controller/FormsController.php");
-
-session_start();
 
 $routeComponents = isset($_GET['route'])?$_GET['route']:'pages.home';
 $route = explode('.', $routeComponents);

@@ -173,6 +173,12 @@ div#hamburger-icon.open span:nth-child(6) {
 	width: 80%;
 	max-width: 1000px;
 }
+/*************STYLE FOR EMPTY FIELDS ON FORMS***********/
+.empty{
+	border: 2px solid tomato;
+	border-radius: 4px;
+}
+
 /*************FOOTER***************/
 footer {
 	display: table-footer-group;
