@@ -22,6 +22,9 @@
 				case 'activate':
 					User::confirm();
 					break;
+				case 'login':
+					User::login();
+					break;
 				default:
 					break;
 			}

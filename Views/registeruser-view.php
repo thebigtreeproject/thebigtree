@@ -16,10 +16,10 @@
 		<input type="text" name="strEmail" id="email" placeholder="ex. abc@abc.com">
 
 		<label class="required" for="password">Password</label>
-		<input type="text" name="strPassword" id="password" placeholder="*******">
+		<input type="password" name="strPassword" id="password" placeholder="*******">
 
 		<label class="required" for="repeatPassword">Repeat Passwod</label>
-		<input type="text" id="repeatPassword" placeholder="*******">
+		<input type="password" id="repeatPassword" placeholder="*******">
 
 <!--		<input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy-->
 
