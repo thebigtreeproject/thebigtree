@@ -9,9 +9,7 @@
 	</div>
 </section>
 <?php
-
 include("Views/border-view.php")
-
 ?>
 <section>
 
