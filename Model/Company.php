@@ -57,5 +57,5 @@ Class Company{
 				companies.id=".$nCompanyID;
 			return DB::con()->runSQL("getSingleData", $sql);
 		}
-}
+	}
 ?>

@@ -30,8 +30,18 @@
 		public function services()
 		{
 			//services page
+			$arrData['categories'] = Category::getAllCategories();
 			$arrData['services'] = Companies::getAll();
 			$content = $this->loadView("services", $arrData);
+			include("Views/publiclayout-view.php");
+		}
+		
+		public function category()
+		{
+			//services page
+			$nCatID = isset($_GET['catid'])?$_GET['catid']:'';
+			$arrData['service'] = Category::getOne($nCatID);
+			$content = $this->loadView("category", $arrData);
 			include("Views/publiclayout-view.php");
 		}
 		
@@ -77,8 +87,8 @@
 		}
 		
 		public function registerservice(){
-			$arrServices = Category::getAllCategories();
-			$content = $this->loadView("registerservice", $arrServices);
+			$arrCategories = Category::getAllCategories();
+			$content = $this->loadView("registerservice", $arrCategories);
 			include("Views/publiclayout-view.php");
 		}
 

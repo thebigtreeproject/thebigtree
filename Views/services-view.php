@@ -1,4 +1,9 @@
 <?php
+foreach($arrData['categories'] as $category){
+?>
+	<a href="index.php?route=pages.category&catid=<?=$category['id']?>"><?=$category['strName']?></a>
+<?php
+}
 foreach($arrData['services'] as $service){
 ?>
 	<h2><a href="index.php?route=pages.service&serviceID=<?=$service['id']?>"><?=$service['strName']?></a></h2>
