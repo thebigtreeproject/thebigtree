@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section>
 <div class="service">
 		<h1>Services</h1>
@@ -45,3 +46,23 @@
 	   </div>
 </div>
 </section>
+=======
+<?php
+$service = $arrData['service'];
+?>
+	<h2><a href="index.php?route=pages.service&sericeID=<?=$service['id']?>"><?=$service['strName']?></a></h2>
+	<div width='50'>
+		<img src="images/<?=$service['strLogoFile']?>" alt="">
+	</div>
+	<h3>Description: </h3>
+	<p><?=nl2br($service['strDescription'])?></p>
+	<h3>Email: </h3>
+	<p><?=nl2br($service['strEmail'])?></p>
+	<h3>Address: </h3>
+	<p><?=$service['strAddress']?></p>
+	<h3>Phone: </h3>
+	<p><?=nl2br($service['nPhone'])?></p>
+	<div width='200'>
+		<img src="images/<?=$service['strCoverFile']?>" alt="">
+	</div>
+>>>>>>> 59d4343671222d401d4302afa2d38f4c5c9fce89

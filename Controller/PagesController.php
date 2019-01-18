@@ -40,8 +40,21 @@
 		public function services()
 		{
 			//services page
+
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
 			$content = $this->loadView("service");
+
+			$arrData['services'] = Companies::getAll();
+			$content = $this->loadView("services", $arrData);
+			include("Views/publiclayout-view.php");
+		}
+		
+		public function service()
+		{
+			//services page
+			$nCompanyID = isset($_GET['serviceID'])?$_GET['serviceID']:'';
+			$arrData['service'] = Company::getOne($nCompanyID);
+			$content = $this->loadView("service", $arrData);
 			include("Views/publiclayout-view.php");
 		}
 
@@ -61,7 +74,7 @@
 
 		public function register()
 		{
-			$content = $this->loadView("userregistration");
+			$content = $this->loadView("registeruser");
 			include("Views/publiclayout-view.php");
 		}
 
@@ -73,7 +86,7 @@
 
 		public function login()
 		{	
-			$content = $this->loadView("loginregister");
+			$content = $this->loadView("login");
 			include("Views/publiclayout-view.php");
 		}
 		

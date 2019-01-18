@@ -8,7 +8,13 @@
 			</div>
 	</div>
 </section>
+<?php
+
+include("Views/border-view.php")
+
+?>
 <section>
+
 	<div class="companies">
 		  <div>
 			<img src="assets/company.jpg" alt="company images">
