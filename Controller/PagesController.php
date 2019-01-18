@@ -62,7 +62,8 @@
 			//services page
 			$nCompanyID = isset($_GET['serviceID'])?$_GET['serviceID']:'';
 			$arrData['service'] = Company::getOne($nCompanyID);
-			$content = $this->loadView("service", $arrData);
+			$arrData['modalcontent'] = $this->loadView("servicedetails", $arrData['service']);
+			$content = $this->loadView("modalholder", $arrData['modalcontent']);
 			include("Views/publiclayout-view.php");
 		}
 
