@@ -2,7 +2,7 @@
 include("Views/header-view.php");
 ?>
 <div class="content">
-	<div class="<?=(isset($contentMainClass)?$contentMainClass:"container");?>">
+	<div>
 		<?=$content?>
 	</div>
 </div>

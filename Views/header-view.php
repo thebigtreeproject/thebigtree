@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>TheBigTree</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
@@ -10,7 +11,11 @@
 <header>
 	<div class="header container">
 		<div>
-			<img src="imgs/logo.png" alt="The Big Tree Logo">
+			<img src="icon/logo.png" alt="The Big Tree Logo" id="logo">
+		</div>
+		<div class='register-header'>
+			<a href="index.php?route=pages.login" id="login">Login</a>
+			<a href="index.php?route=pages.login" id="join">Join</a>
 		</div>
 		<div class="nav nav-header">
 			<nav>
@@ -22,10 +27,6 @@
 					<li><a href="index.php?route=pages.contact">Contact</a></li>
 				</ul>
 			</nav>
-		</div>
-		<div class='register-header'>
-			<a href="index.php?route=pages.login">Login</a>
-			<a href="index.php?route=pages.login">Join</a>
 		</div>
 		<div id="hamburger-icon">
 			<span></span>

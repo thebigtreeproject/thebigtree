@@ -1,6 +1,6 @@
 		<footer>
 			<div class="footer container">
-				HERE GOES THE CODE FOR THE FOOTER
+				<p>All Rights Reserved - BigDesign3 - TheBigTree 2019</p>
 			</div><!--footer-->
 		</footer>
 

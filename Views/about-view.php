@@ -1,14 +1,24 @@
-<div class="aboutContainer">
-	<h2>About Us</h2>
-	<div class="aboutGrid">
-		<div class="aboutImg">
-			<img src="images/happydog.png" alt="aboutDog">
-		</div><!--ABOUTIMG-->
-		<div class="aboutText">
-			<p>
-			Here at BIG TREE, we are all dog lovers. With our furry friends in mind, we’ve created the most comfortable and stylish dog beds and crate covers possible, each one designed with your pup in mind. Our products are guaranteed to be high quality at an affordable price. Because your best friend deserves the best!
-			</p>
-			<a href="index.php?route=pages.services" class="btn btn-primary">View all our Products</a>
-		</div><!--ABOUTTEXT-->	
-	</div><!--aboutGrid-->
-</div><!--aboutContainer-->
+<section>
+	<div class="aboutTextTitle">
+		<h1>About Us</h1>
+			<div>
+				<p>Lorem ipsum dolor sit amet sed diam nonummy nibh euismode tincidunt ut laoreet dolore magna aliquam erat volupat. Ut wisi enim ad minum veniam, quist nostrud exerci tation ullarcorper suscipit lobortis nisl ut aliquip ex ea.
+		        Lorem ipsum dolor sit amet sed diam nonummy nibh euismode tincidunt ut laoreet dolore magna aliquam erat volupat. Ut wisi enim ad minum veniam, quist nostrud exerci tation ullarcorper suscipit lobortis nisl ut aliquip ex ea.
+				</p>
+			</div>
+	</div>
+</section>
+<section>
+	<div class="companies">
+		  <div>
+			<img src="assets/company.jpg" alt="company images">
+			<h2>Companies</h2>
+			<p>Registering is not hard, by having your company sign with us it can help people with special needs find you easily</p>
+		</div>
+		<div>
+			<img src="assets/girl.jpg" alt="young girl having fun in a waterpark">
+			<h2>Clients</h2>
+			<p>It can be time consuming to find any service you want. TheBigTree is here for you. All the service you need in one place</p>
+		</div>
+	</div>
+</section>

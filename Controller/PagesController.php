@@ -16,22 +16,32 @@
 		{
 			// home page
 			$content = $this->loadView("hero");
-			$content .= '<h1> Home Page </h1>';
-			$content .= $this->loadView("contact");
+			$content .= $this->loadView("homecontent");
+			$content .= $this->loadView('testimonial');
+			$content .= $this->loadView('border');
+			$content .= $this->loadView('contact');
+
 			include("Views/publiclayout-view.php");
+
 		}
 
 		public function about()
 		{
-			$content = $this->loadView("about");
+			
+			$content = $this->loadView("hero");		
+			$content .= $this->loadView("about");
+			$content .= $this->loadView('border');
+			$content .= $this->loadView('contact');
+
 			include("Views/publiclayout-view.php");
+			
 		}
 
 		public function services()
 		{
 			//services page
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
-			$content = '<h1> Services Page  </h1>';
+			$content = $this->loadView("service");
 			include("Views/publiclayout-view.php");
 		}
 
