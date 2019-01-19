@@ -6,7 +6,7 @@ foreach($arrData['categories'] as $category){
 }
 foreach($arrData['services'] as $service){
 ?>
-	<h2><a href="index.php?route=pages.service&serviceID=<?=$service['id']?>"><?=$service['strName']?></a></h2>
+	<h2><a class="services-name" href="index.php?route=pages.modalservice&serviceID=<?=$service['id']?>"><?=$service['strName']?></a></h2>
 	<div width='50'>
 		<img src="images/<?=$service['strLogoFile']?>" alt="">
 	</div>
