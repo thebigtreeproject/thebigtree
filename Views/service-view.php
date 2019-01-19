@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <section>
 <div class="service">
 		<h1>Services</h1>
@@ -46,7 +45,6 @@
 	   </div>
 </div>
 </section>
-=======
 <?php
 $service = $arrData['service'];
 ?>
@@ -65,4 +63,3 @@ $service = $arrData['service'];
 	<div width='200'>
 		<img src="images/<?=$service['strCoverFile']?>" alt="">
 	</div>
->>>>>>> 59d4343671222d401d4302afa2d38f4c5c9fce89
