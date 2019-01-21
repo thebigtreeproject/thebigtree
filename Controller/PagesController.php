@@ -57,14 +57,14 @@
 			include("Views/publiclayout-view.php");
 		}
 		
-		public function service()
+		public function modalservice()
 		{
 			//services page
 			$nCompanyID = isset($_GET['serviceID'])?$_GET['serviceID']:'';
 			$arrData['service'] = Company::getOne($nCompanyID);
 			$arrData['modalcontent'] = $this->loadView("servicedetails", $arrData['service']);
-			$content = $this->loadView("modalholder", $arrData['modalcontent']);
-			include("Views/publiclayout-view.php");
+			
+			echo $this->loadView("modalholder", $arrData['modalcontent']);
 		}
 
 		public function testimonials()
