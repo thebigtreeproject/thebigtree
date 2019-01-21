@@ -72,6 +72,7 @@
 			//services page
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
 			$content = '<h1> Companies Page  </h1>';
+			$content .= $this->loadView('testimonial');
 			include("Views/publiclayout-view.php");
 		}
 
