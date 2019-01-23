@@ -44,6 +44,18 @@
 			}
 			
 		}
+		public function testimonial($action)
+		{
+			switch ($action){
+				case 'save':
+					Testimonials::submit();
+					header('location: ./?route=pages.testimonials');
+					break;
+				default:
+					break;
+			}
+			
+		}
 	}
 
 ?>

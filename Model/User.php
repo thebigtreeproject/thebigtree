@@ -13,12 +13,12 @@
 					strPassword,
 					bActivated)
 				VALUES (
-					'".utf8_encode($_POST['strFirstName'])."', 
-					'".utf8_encode($_POST['strLastname'])."',
-					'".utf8_encode($_POST['strEmail'])."',
-					'".utf8_encode($_POST['strZipCode'])."',
-					'".utf8_encode($_POST['strAdress'])."',
-					'".utf8_encode($_POST['strPassword'])."',
+					'".addslashes(utf8_encode($_POST['strFirstName']))."', 
+					'".addslashes(utf8_encode($_POST['strLastname']))."',
+					'".addslashes(utf8_encode($_POST['strEmail']))."',
+					'".addslashes(utf8_encode($_POST['strZipCode']))."',
+					'".addslashes(utf8_encode($_POST['strAdress']))."',
+					'".password_hash($_POST['strPassword'], PASSWORD_DEFAULT)."',
 					0)";
 			$userID = DB::con()->runSQL("insertNew", $sql);
 			$_SESSION['userInfo'] = $_POST;		
@@ -70,6 +70,13 @@
 			else{
 				echo '<p>Something went wrong please, check your password and user name and try again.</p>';				
 			}
+		}
+		
+		static function submitTestmonial(){
+			$sql = "INSERT INTO testimonials(strTestimonial, nUserID, nDateUTC) VALUES ('".addslashes($_POST['strTestimonial'])."','".$_POST['nUserID']."','".$_POST['nDate']."')";
+			echo DB::con()->runSQL("insertNew", $sql);
+			echo $sql;
+			die;
 		}
 		
 		static function getMemberInfo($arrItems){

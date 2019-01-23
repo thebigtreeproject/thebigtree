@@ -1,32 +1,15 @@
 $(function(){
-	$('#login').click(function(){
+	$('.services-name').click(function(e){
+		e.preventDefault();
 		$.ajax({
-			url: 'index.php?action=memberLogin',
-			method: 'post',
-			data: {
-				'id' : $('#productName').data('productid'),
-				'date': $.now(),
-				'nQuantity': $('#quantity').val()
-			},
-			success: function(result){
-				const quantity = $('.cartNav').find('#cart-product-quantity').text();
-				let nItems = parseInt(quantity)+1;
-				$('.cartNav').find('#cart-product-quantity').text(nItems);
-				$('body').append(result);
-				$('.modal-container').css('display', 'block').animate({opacity: 1});
-			},
-			error: function(){
-				console.log('error');
+			url: $(this).attr('href'),
+			success: function(result) {
+				$('.content').append(result);
+				setTimeout(() => { $('.modal-container').css('opacity', 1) }, 50);
+				setTimeout(() => { $('.modal-holder>*').css({'transform': 'translateX(-50%) translateY(-50%) scale(1)'})}, 200);
+				$('.modal-holder>*').append('<div id="close-modal">X</div>').on('click', ()=>{$('.modal-container').remove()});
 			}
-			
 		});
 		return false;
 	})
-//	$('#deleteItem').click(function(){
-//		$.ajax({
-//			url: $(this).data('target'),
-//		});
-//		$(this).remove();
-//		return false;
-//	})
 });

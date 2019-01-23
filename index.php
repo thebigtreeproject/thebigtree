@@ -8,6 +8,7 @@ include("Model/User.php");
 include("Model/Email.php");
 include("Model/Companies.php");
 include("Model/Company.php");
+include("Model/Testimonials.php");
 include("Controller/MainController.php");
 include("Controller/PagesController.php");
 include("Controller/FormsController.php");

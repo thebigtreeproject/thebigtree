@@ -15,7 +15,11 @@
 		public function home()
 		{
 			// home page
-			$content = $this->loadView("hero");
+			
+			// to add a hero image in a page just copy the two lines below and change the path for the image
+			$arrData['heroImage'] = 'assets/happy.jpg'; // notice that you need to provide the folder and the name of the image (i.e. ASSETS / IMAGE.JPG)
+			$content = $this->loadView("hero", $arrData);
+			
 			$content .= $this->loadView("homecontent");
 			$content .= $this->loadView('testimonial');
 			$content .= $this->loadView('border');
@@ -27,8 +31,8 @@
 
 		public function about()
 		{
-			
-			$content = $this->loadView("hero");		
+			$arrData['heroImage'] = 'assets/happy.jpg';
+			$content = $this->loadView("hero", $arrData);	
 			$content .= $this->loadView("about");
 			$content .= $this->loadView('border');
 			$content .= $this->loadView('contact');
@@ -57,21 +61,22 @@
 			include("Views/publiclayout-view.php");
 		}
 		
-		public function service()
+		public function modalservice()
 		{
 			//services page
 			$nCompanyID = isset($_GET['serviceID'])?$_GET['serviceID']:'';
 			$arrData['service'] = Company::getOne($nCompanyID);
 			$arrData['modalcontent'] = $this->loadView("servicedetails", $arrData['service']);
-			$content = $this->loadView("modalholder", $arrData['modalcontent']);
-			include("Views/publiclayout-view.php");
+			
+			echo $this->loadView("modalholder", $arrData['modalcontent']);
 		}
 
 		public function testimonials()
 		{
 			//services page
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
-			$content = '<h1> Companies Page  </h1>';
+			$arrData['testimonials'] = Testimonials::getTestimonials(5);
+			$content = $this->loadView('testimonial', $arrData['testimonials']);
 			include("Views/publiclayout-view.php");
 		}
 
