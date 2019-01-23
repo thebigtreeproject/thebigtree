@@ -62,7 +62,7 @@
 				<h1>Hotel & Travel</h1>
 			</div>
 			<div class="back-text">
-				<h1>Hotel & Travel<</h1>
+				<h1>Hotel & Travel</h1>
 				<p>Hello, from the other side. I must have called a thousand times. To tell you that I am sorry for breaking your hearth.</p>
 				<a href="#" class="servicebtn">Learn More</a>
 			</div>
