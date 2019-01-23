@@ -15,7 +15,7 @@
 		</div>
 		<div class='register-header'>
 			<a href="index.php?route=pages.login" id="login">Login</a>
-			<a href="index.php?route=pages.login" id="join">Join</a>
+			<a href="index.php?route=pages.register" id="join">Join</a>
 		</div>
 		<div class="nav nav-header">
 			<nav>
