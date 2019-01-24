@@ -231,7 +231,8 @@ div#hamburger-icon.open span:nth-child(6) {
 }
 /*************FOOTER***************/
 footer {
-	display: table-footer-group;
+  width: 100%;
+	display: block;
 	background: #000000;
 }
 .footer{
@@ -459,13 +460,12 @@ form{
 
 }
 form input[type=text], textarea{
-  width:40%;
-  padding:20px;
-  border:5px solid #008080;
+  width:100%;
+  padding:10px;
+  border:2px solid #008080;
   resize:vertical;
   display:block;
-  margin:0 auto;
-  border-radius:5px;
+  margin: auto;
 }
 
 label.required{
