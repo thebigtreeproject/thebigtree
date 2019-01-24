@@ -186,9 +186,19 @@
 		<label class="required" for="password">Password</label> -->
 	<!-- 	<input type="password" name="strPassword" id="password" placeholder="*******"> -->
 
-<!--		<input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy-->
+		<input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy
 
+<<<<<<< HEAD
 <!-- 		<input type="submit"  class="btn btn-primary"><br>
+=======
+		<input type="submit"  class="btn btn-primary"><br>
+		
+		<div class="bottomForm">
+			<p>Not a Member?
+				<a href="index.php?route=pages.register">Register now</a>
+			</p>
+		</div>
+>>>>>>> e1ad74c806654f695bfa202ed09cd4424d83b2cb
 	</div>
 </form>
  -->
