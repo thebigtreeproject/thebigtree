@@ -186,9 +186,7 @@
 		<label class="required" for="password">Password</label> -->
 	<!-- 	<input type="password" name="strPassword" id="password" placeholder="*******"> -->
 
-		<input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy
-
-<<<<<<< HEAD
+		<!-- <input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy -->
 <!-- 		<input type="submit"  class="btn btn-primary"><br>
 =======
 		<input type="submit"  class="btn btn-primary"><br>
