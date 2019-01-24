@@ -457,6 +457,8 @@ footer {
 form{
   margin-top:50px;
   margin-bottom:100px;
+  width: 500px;
+  margin-left: 35%;
 
 }
 form input[type=text], textarea{
