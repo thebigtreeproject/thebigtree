@@ -576,5 +576,7 @@ div.iconmiddle{
 width:50px;
 
 }
-
-
+/******* COMPANIES LIST ON CATEGORY PAGE *******/
+ul.complist{
+	display: none;
+}

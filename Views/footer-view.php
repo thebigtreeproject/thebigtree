@@ -10,6 +10,7 @@
 		<script src="js/form_validation.js"></script>
 		<script src="js/modalAjax.js"></script>
 		<script src="js/hamburger.js"></script>
+		<script src="js/filterservices_by_alpha.js"></script>
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMaFf1MASfiqfZ74bRkaGWKbeEIcUIVOU&callback=initMap"></script>
 	</body>
 </html>
