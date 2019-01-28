@@ -236,6 +236,7 @@ footer {
 	background: #000000;
 }
 .footer{
+  position: absolute;
 	height:50px;
   color:white;
   padding:20px;
