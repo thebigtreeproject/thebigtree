@@ -30,6 +30,9 @@
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: 0.6;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 .form button {
   font-family: "Roboto", sans-serif;
@@ -158,19 +161,27 @@ body, .acrylic::before {
   background-image: url("assets/womanReg.jpg");
 }
 
+.registerForm label
+{
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #fff;
+	text-align: left;
+  	font-family: "Roboto", sans-serif;
+
+}
 </style>
 
-<!-- <form class="user-registration" method="post" action="index.php?route=user.login" onsubmit="return validate()">
-	<div class="registerForm"> -->
-	<!-- 	<label class="required" for="email">Email</label>
-		<input type="text" name="strEmail" id="email" placeholder="ex. abc@abc.com"> -->
-<!-- 
-		<label class="required" for="password">Password</label> -->
-	<!-- 	<input type="password" name="strPassword" id="password" placeholder="*******"> -->
+<!-- <form class="user-registration" method="post" action="index.php?route=user.login">
+	<div class="registerForm">
+	<label class="required" for="email">Email</label>
+		<input type="text" name="strEmail" id="email" placeholder="ex. abc@abc.com"> 
 
-		<!-- <input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy -->
-<!-- 		<input type="submit"  class="btn btn-primary"><br>
-=======
+		<label class="required" for="password">Password</label>
+		<input type="password" name="strPassword" id="password" placeholder="*******">
+
+		 <input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy 
+		<input type="submit"  class="btn btn-primary"><br>
 		<input type="submit"  class="btn btn-primary"><br>
 		
 		<div class="bottomForm">
@@ -178,35 +189,60 @@ body, .acrylic::before {
 				<a href="index.php?route=pages.register">Register now</a>
 			</p>
 		</div>
->>>>>>> e1ad74c806654f695bfa202ed09cd4424d83b2cb
 	</div>
 </form>
  -->
 
+
+			
 <div class="dualForm">
 	<div class="login-page">
 		<div class="form registerForm">
+				<!------REGISTER------>
+			  <form class="user-registration register-form acrylic" method="post" action="index.php?route=user.login">
+			    <div class="registerForm">
+				    <span>Sign Up</span>
+						<label class="required contactLabel">First Name</label>
+						<input type="text" name="strFirstName" id="firstName" placeholder="ex. Saphyra">
 
-		  <form class="register-form acrylic user-registration" method="post" action="index.php?route=user.login" onsubmit="return validate()">
-		    
-		    <span>Sign Up</span>
-		    <input type="text" placeholder="ex. abc@abc.com" class="required nameText" for="email" for="password"/>
-		    <input class="required" type="password" name="strPassword" id="password" placeholder="*******"/>
-		    <button id="SignUp">Go</button>
-		    <p class="message"><a href="#">I have Account</a></p>
+						<label class="required contactLabel" for="lastname">Last Name</label>
+						<input type="text" name="strLastname" id="lastname" placeholder="ex. Donnaly">
 
-		  </form><!--register-form acrylic user-registration-->
+						<label class="required contactLabel" for="streetAdress">Street Address:</label>
+						<input type="text" name="strAdress" id="streetAdress" placeholder="ex.nelson street">
 
-		  <form class="login-form acrylic">
+						<label class="required contactLabel" for="zipCode">Zip Code:</label>
+						<input type="text" name="strZipCode" id="zipCode" placeholder="x5x5x5">
 
-		    <span>Login to your account</span>
-		    <input type="text" placeholder="Email" class="nameText" />
-		    <input type="password" placeholder="Password"/>
-		    <button id="SignIn">Login</button>
-		    <p class="message"><a href="#">Create Account</p>
+						<label class="required contactLabel" for="email">Email</label>
+						<input type="text" name="strEmail" id="email" placeholder="ex. abc@abc.com">
 
-		  </form><!--login-form acrylic-->
+						<label class="required contactLabel" for="password">Password</label>
+						<input type="password" name="strPassword" id="password" placeholder="*******">
 
-		</div><!--form registerForm-->
-	</div><!--login-page-->
+						<label class="required contactLabel" for="repeatPassword">Repeat Passwod</label>
+						<input type="password" id="repeatPassword" placeholder="*******">
+
+				<input type="submit"  class="btn btn-primary"><br>
+				<p class="message"><a href="#">I have Account</a></p>
+				</div><!--registerForm-->
+
+				<!------LOGIN------>
+			   </form><!--register-form acrylic user-registration-->
+
+				  <form class="login-form acrylic" method="post">
+
+				    <span>Login to your account</span>
+				  	<label class="required contactLabel" for="email">Email</label>
+					<input type="text" name="strEmail" class="nameText" id="email" placeholder="ex. abc@abc.com"> 
+
+					<label class="required contactLabel" for="password">Password</label>
+					<input type="password" name="strPassword" id="password" placeholder="*******">
+					<input type="submit"  class="btn btn-primary"><br>
+
+				    <p class="message"><a href="#">Create Account</p>
+				  </form>
+		</div> <!--form registerForm-->
+	</div> <!--login-page-->
+</div><!--DUALfORM-->
 

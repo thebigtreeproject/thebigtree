@@ -226,7 +226,7 @@ div#hamburger-icon.open span:nth-child(6) {
 }
 /*************STYLE FOR EMPTY FIELDS ON FORMS***********/
 .empty{
-	border: 2px solid tomato;
+	border: 2px solid tomato !important;
 	border-radius: 4px;
 }
 /*************FOOTER***************/
