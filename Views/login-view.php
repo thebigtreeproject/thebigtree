@@ -1,6 +1,4 @@
 <style type="text/css">
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
 .login-page {
   width: 360px;
   padding: 1% 0 0;
@@ -171,77 +169,53 @@ body, .acrylic::before {
 
 }
 </style>
-
-<!-- <form class="user-registration" method="post" action="index.php?route=user.login">
-	<div class="registerForm">
-	<label class="required" for="email">Email</label>
-		<input type="text" name="strEmail" id="email" placeholder="ex. abc@abc.com"> 
-
-		<label class="required" for="password">Password</label>
-		<input type="password" name="strPassword" id="password" placeholder="*******">
-
-		 <input type="checkbox" name="bAgreement"> I agree with the <a href="#">terms and conditions</a> of the privacy policy 
-		<input type="submit"  class="btn btn-primary"><br>
-		<input type="submit"  class="btn btn-primary"><br>
 		
-		<div class="bottomForm">
-			<p>Not a Member?
-				<a href="index.php?route=pages.register">Register now</a>
-			</p>
-		</div>
-	</div>
-</form>
- -->
-
-
-			
 <div class="dualForm">
 	<div class="login-page">
 		<div class="form registerForm">
 				<!------REGISTER------>
-			  <form class="user-registration register-form acrylic" method="post" action="index.php?route=user.login">
+			  <form class="user-registration register-form acrylic" method="post" action="index.php?route=user.save">
 			    <div class="registerForm">
 				    <span>Sign Up</span>
 						<label class="required contactLabel">First Name</label>
-						<input type="text" name="strFirstName" id="firstName" placeholder="ex. Saphyra">
+						<input type="text" name="strFirstName" placeholder="ex. Saphyra">
 
 						<label class="required contactLabel" for="lastname">Last Name</label>
-						<input type="text" name="strLastname" id="lastname" placeholder="ex. Donnaly">
+						<input type="text" name="strLastname" placeholder="ex. Donnaly">
 
 						<label class="required contactLabel" for="streetAdress">Street Address:</label>
-						<input type="text" name="strAdress" id="streetAdress" placeholder="ex.nelson street">
+						<input type="text" name="strAdress" placeholder="ex.nelson street">
 
 						<label class="required contactLabel" for="zipCode">Zip Code:</label>
-						<input type="text" name="strZipCode" id="zipCode" placeholder="x5x5x5">
+						<input type="text" name="strZipCode" placeholder="x5x5x5">
 
 						<label class="required contactLabel" for="email">Email</label>
-						<input type="text" name="strEmail" id="email" placeholder="ex. abc@abc.com">
+						<input type="text" name="strEmail" placeholder="ex. abc@abc.com">
 
 						<label class="required contactLabel" for="password">Password</label>
-						<input type="password" name="strPassword" id="password" placeholder="*******">
+						<input type="password" name="strPassword" placeholder="*******">
 
 						<label class="required contactLabel" for="repeatPassword">Repeat Passwod</label>
-						<input type="password" id="repeatPassword" placeholder="*******">
+						<input type="password" placeholder="*******">
 
-				<input type="submit"  class="btn btn-primary"><br>
-				<p class="message"><a href="#">I have Account</a></p>
-				</div><!--registerForm-->
+            <input type="submit"  class="btn btn-primary"><br>
+            <p class="message"><a href="#">I have Account</a></p>
+          </div><!--registerForm-->
+        </form><!--register-form acrylic user-registration-->
+        <!------LOGIN------>
 
-				<!------LOGIN------>
-			   </form><!--register-form acrylic user-registration-->
+        <form class="login-form acrylic" method="post" action="index.php?route=user.login">
 
-				  <form class="login-form acrylic" method="post">
+          <span>Login to your account</span>
+          <label class="required contactLabel" for="email">Email</label>
+          <input type="text" name="strEmail" class="nameText" placeholder="ex. abc@abc.com"> 
 
-				    <span>Login to your account</span>
-				  	<label class="required contactLabel" for="email">Email</label>
-					<input type="text" name="strEmail" class="nameText" id="email" placeholder="ex. abc@abc.com"> 
+          <label class="required contactLabel" for="password">Password</label>
+          <input type="password" name="strPassword" placeholder="*******">
+          <input type="submit"  class="btn btn-primary"><br>
 
-					<label class="required contactLabel" for="password">Password</label>
-					<input type="password" name="strPassword" id="password" placeholder="*******">
-					<input type="submit"  class="btn btn-primary"><br>
-
-				    <p class="message"><a href="#">Create Account</p>
-				  </form>
+          <p class="message"><a href="#">Create Account</p>
+        </form>
 		</div> <!--form registerForm-->
 	</div> <!--login-page-->
 </div><!--DUALfORM-->
