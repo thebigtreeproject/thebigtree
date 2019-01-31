@@ -61,7 +61,7 @@
 		{
 			//services page
 			$nCatID = isset($_GET['catid'])?$_GET['catid']:'';
-			$arrData['service'] = Category::getOne($nCatID);
+			$arrData = Category::getOneForPager($nCatID);
 			$content = $this->loadView("category", $arrData);
 			include("Views/publiclayout-view.php");
 		}

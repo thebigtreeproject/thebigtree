@@ -1,7 +1,7 @@
 $(function(){
-	$('form').submit(function() {
+	$('form').submit(function(event) {
 		let missing = 0;
-		$('.required').each(function(){
+		$(event.target).find('.required').each(function(){
 			const field = $(this).next();
 			if(field.is("input") || field.is("textarea")){
 				if(field.val()){

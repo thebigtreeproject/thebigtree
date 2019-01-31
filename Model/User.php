@@ -56,8 +56,6 @@
 		}
 		
 		static function login(){
-			$_POST['strEmail'] = "italo.carillo@globo.com";
-			$_POST['strPassword'] = '123123';
 			
 			$sql = "SELECT * FROM users WHERE users.strEmail='".$_POST['strEmail']."'";
 			$user = DB::con()->runSQL("getSingleData", $sql);
@@ -68,7 +66,7 @@
 				header('location: ./');
 			}
 			else{
-				echo '<p>Something went wrong please, check your password and user name and try again.</p>';				
+				echo '<p>Something went wrong please, check your password and user name and try again.</p>';
 			}
 		}
 		
