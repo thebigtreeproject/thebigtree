@@ -1,29 +1,24 @@
-<section>
-<div class="contactView">
-	<h1>Contact Us</h1>
-	<div class="iconcontact">
-		<div>
-			<img src="icon/email.png" alt="email icon">
-			<p>thebigtree@email.com</p>
-		</div>
-		<div>
-			<img src="icon/instagram.png" alt="instagram icon">
-			<img src="icon/facebook.png" alt="facebook icon">
-			<img src="icon/twitter.png" alt="twitter icon">
-		</div>
-    </div>
+<section class="secondHero" id="contact">
+	<div></div>
 	<div>
-		<form method="post" onsubmit="return validate()">
-			<label class="required">Full Name:</label>
-			<input type="text" name="strName" id="strName" placeholder="Jane Doe" value="">
-			<label class="required">Email:</label>
-			<input type="text" name="strEmail" id="strEmail" placeholder="abc@gmail.com" value="">
-			<label class="required">Message:</label>
-			<textarea name="strMessage" id="strMessage" placeholder="Enter your message.."></textarea>
-			<input type="submit" name="submit" value="Submit" class="btn btn-primary">
-		</form>
+		<h1>Contact Us</h1>
+		
+		<div id="contactForm">
+            <div id="info">
+			<p>(604) 555 5555</p>
+		    <p>thebigtree@thebigtree.com</p>
+		    <p>570 Dunsmuir St., Vancouver, BC</p>
+		</div><!--endinfo-->
+                
+			<form method="post" onsubmit="return validate()">
+				<label class="requiredLabel">Full Name: </label>
+				<input type="text" name="strFullName" placeholder="Enter your full name" class="requiredField" id="fullname" value="" required/"><br/>
+				<label class="requiredLabel">Email Address:</label>
+				<input type="email" name="strEmailAddress" placeholder="Enter your email address" class="requiredField" id="emailAddress" value="" required/><br/>
+				<label class="requiredLabel">Message:</label>
+				<textarea name="strMessage" id="message" value="" required/></textarea>
+				<input type="submit" onClick="validateForm()" name="Submit" class="contactbtn" value="Submit"/>
+			</form><!--endform-->
+		</div><!--endcontactForm-->
 	</div>
-		<!-- <div id="map"></div> --><!--map-->
-</div>
-
 </section>

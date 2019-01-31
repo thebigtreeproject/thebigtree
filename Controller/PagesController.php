@@ -21,6 +21,7 @@
 			$content = $this->loadView("hero", $arrData);
 			
 			$content .= $this->loadView("homecontent");
+			$content .= $this->loadView("service");
 			$content .= $this->loadView('testimonial');
 			$content .= $this->loadView('border');
 			$content .= $this->loadView('contact');
@@ -46,9 +47,13 @@
 			//services page
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
 			$content = $this->loadView("service");
+
+
 			$arrData['categories'] = Category::getAllCategories();
 			$arrData['services'] = Companies::getAll();
-			$content = $this->loadView("services", $arrData);
+			
+
+			// $content = $this->loadView("services", $arrData);
 			include("Views/publiclayout-view.php");
 		}
 		
