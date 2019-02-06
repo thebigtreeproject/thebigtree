@@ -509,11 +509,11 @@ footer {
       padding:40px;
 }
 
-.service-item-black{
+.service-item:nth-child(even){
       background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
 }
 
-.service-item-white{
+.service-item:nth-child(odd){
       background:linear-gradient(rgba(206,208,206,0.6), rgba(206,208,206,0.6));
       color:black;
 }

@@ -46,14 +46,10 @@
 		{
 			//services page
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
-			$content = $this->loadView("service");
 
 
 			$arrData['categories'] = Category::getAllCategories();
-			$arrData['services'] = Companies::getAll();
-			
-
-			// $content = $this->loadView("services", $arrData);
+			$content = $this->loadView("service", $arrData);		
 			include("Views/publiclayout-view.php");
 		}
 		
