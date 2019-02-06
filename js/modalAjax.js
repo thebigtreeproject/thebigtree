@@ -7,7 +7,7 @@ $(function(){
 				$('.content').append(result);
 				setTimeout(() => { $('.modal-container').css('opacity', 1) }, 50);
 				setTimeout(() => { $('.modal-holder>*').css({'transform': 'translateX(-50%) translateY(-50%) scale(1)'})}, 200);
-				$('.modal-holder>*').append('<div id="close-modal">X</div>').on('click', ()=>{$('.modal-container').remove()});
+				$('.modal-holder>*').append('<div id="modal-close"><i class="far fa-window-close"></i></div>').on('click', ()=>{$('.modal-container').remove()});
 			}
 		});
 		return false;

@@ -15,19 +15,18 @@
 		public function home()
 		{
 			// home page
-			
 			// to add a hero image in a page just copy the two lines below and change the path for the image
 			$arrData['heroImage'] = 'assets/happy.jpg'; // notice that you need to provide the folder and the name of the image (i.e. ASSETS / IMAGE.JPG)
 			$content = $this->loadView("hero", $arrData);
 			
 			$content .= $this->loadView("homecontent");
-			$content .= $this->loadView("service");
+			$arrData['categories'] = Category::getAllCategories();
+			$content .= $this->loadView("service", $arrData);	
 			$content .= $this->loadView('testimonial');
 			$content .= $this->loadView('border');
 			$content .= $this->loadView('contact');
 
 			include("Views/publiclayout-view.php");
-
 		}
 
 		public function about()
@@ -38,15 +37,13 @@
 			$content .= $this->loadView('border');
 			$content .= $this->loadView('contact');
 
-			include("Views/publiclayout-view.php");
-			
+			include("Views/publiclayout-view.php");			
 		}
 
 		public function services()
 		{
 			//services page
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
-
 
 			$arrData['categories'] = Category::getAllCategories();
 			$content = $this->loadView("service", $arrData);		

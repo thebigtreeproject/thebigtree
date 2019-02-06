@@ -50,7 +50,7 @@
 
 			$result['companies'] = DB::con()->runSQL("getAllData", $sql);
 			
-			return (!empty($result['companies']))?$result:false;
+			return (!empty($result))?$result:false;
 		}
 	}
 	

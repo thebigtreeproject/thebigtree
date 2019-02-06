@@ -1,8 +1,4 @@
-<!-- <div>
-	<?php print_r($arrData)?>
-	<h1> <?=$arrData['strName']?></h1>
-</div> -->
-<div class="hairModal">
+<div class="modal-content">
 	<h1> <?=$arrData['strName']?></h1>
 	<div class="content">
 		<img src="assets/hair.jpg">
@@ -18,5 +14,4 @@
 		</ul>
 		<a href="#">VISIT SITE</a>
 	</div><!--features-->
-	
 </div><!--hairModal-->
