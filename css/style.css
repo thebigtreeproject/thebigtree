@@ -27,7 +27,10 @@ header{
 section{
   position:relative;
 }
+/*btown modal view*/
 
+
+/*end of btown modal view*/
 a.btnlogin{
     color:#000000;
     -webkit-transition:0.3s all ease;
@@ -230,8 +233,8 @@ div#hamburger-icon.open span:nth-child(6) {
     	bottom: 0;
     	left: 0;
     	right: 0;
-    	opacity: 0;
-    	display: none;
+    	opacity: 1;
+    	display: block;
 }
 
 .modal-container:before {
@@ -246,12 +249,67 @@ div#hamburger-icon.open span:nth-child(6) {
 }
 .modal-holder>*
 {
-	transform: translateX(-50%) translateY(-50%) scale(0);
+	transform: translateX(-50%) translateY(-50%) scale(1);
 	background: #fff;
-	height: 800px;
+	height: 550px;
 	width: 600px;
 	transition: all 1.2s ease;
+  padding: 20px;
 }
+
+/*serviceDetail design*/
+.hairModal .features a
+{
+  border: 1px solid #008080;
+  font-family:'Merriweather', serif;
+  padding: 10px;
+  margin-left: 10px;
+  color: #000;
+}
+.hairModal .features a:hover
+{
+  background-color: #008080;
+  transition: all ease 0.7s;
+  color: #fff;
+}
+
+.hairModal h1
+{
+  margin: 10px;
+  font-family:'Merriweather', serif;
+  color: #008080;
+  font-size: 22px;
+}
+.hairModal .features h1
+{
+  margin: 10px;
+  font-family:'Merriweather', serif;
+  color: #008080;
+  font-size: 22px;
+}
+
+.hairModal .features ul li
+{
+font-family:'Merriweather', serif;
+margin-bottom: 20px;
+font-size: 18px;
+margin-left: 10px;
+}
+
+.hairModal .content
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 10px;
+  font-family:'Merriweather', serif;
+}
+
+.hairModal .content img
+{
+  max-width: 300px;
+}
+
 
 .container{
     	margin: auto;

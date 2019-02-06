@@ -1,5 +1,5 @@
 <style type="text/css">
-.login-page {
+	.login-page {
   width: 360px;
   padding: 1% 0 0;
   margin: auto;
@@ -169,7 +169,7 @@ body, .acrylic::before {
 
 }
 </style>
-		
+
 <div class="dualForm">
 	<div class="login-page">
 		<div class="form registerForm">
