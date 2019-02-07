@@ -21,8 +21,9 @@
 			
 			$content .= $this->loadView("homecontent");
 			$arrData['categories'] = Category::getAllCategories();
-			$content .= $this->loadView("service", $arrData);	
-			$content .= $this->loadView('testimonial');
+			$content .= $this->loadView("service", $arrData);
+			$arrData['testimonials'] = Testimonials::getTestimonials(5);
+			$content .= $this->loadView('testimonialslider', $arrData['testimonials']);
 			$content .= $this->loadView('border');
 			$content .= $this->loadView('contact');
 

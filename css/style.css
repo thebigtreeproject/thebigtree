@@ -6,7 +6,7 @@
 	text-decoration: none;
 	border: none;
 	outline: none;
-	transition: all 0.2 ease;
+	transition: all 0.2s ease;
 }
 
 html {
@@ -23,14 +23,19 @@ header{
 	background: #ffffff;
 
 }
-
 section{
   position:relative;
 }
-/*btown modal view*/
 
+h2{
+  text-align:center;
+  margin-top:70px;
+  font-family:'Merriweather', serif;
+  font-size:40px; 
+  padding:20px;
+  text-align:center;
+}
 
-/*end of btown modal view*/
 a.btnlogin{
     color:#000000;
     -webkit-transition:0.3s all ease;
@@ -546,23 +551,65 @@ footer img{
 .service-item:hover .back-text{
   bottom:0;
 }
-.testimonialTitle{
-  text-align:center;
-  margin-top:70px;
+section.testimslider{
+  text-align: center;
 }
-.testimonialTitle h1{
-  font-family:'Merriweather', serif;
-  font-size:40px; 
-  padding:20px;
-  text-align:center;
+.testimonial-slider{
+  position: relative;
+  margin: auto;
+  height: 300px;
+  width: 800px;
+  overflow: hidden;
 }
-.testimonialTitle .name{
+.testimonial-slider .slides-holder{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.testimonial-slider .slides{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  float: left;
+  background: #fff;
+  transition: left 1.5s ease, transform 0.3s ease ;
+}
+.testimonial-slider .changeSlide{
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  padding: 10px;
+  top: 0;
+  bottom: 40px;
+  margin: auto;
+  font-size: 40px;
+  color: #008080;
+  background: #fff;
+}
+.testimonial-slider .changeSlide:hover{
+  transform: scale(1.1);
+}
+.testimonial-slider .changeSlide.prev-slide{
+  left: 0;
+  cursor: pointer;
+}
+.testimonial-slider .changeSlide.next-slide{
+  right: 0;
+  cursor: pointer;
+}
+.testimonialTitle .name,
+.testimonial-slider .slides .name{
   font-size:25px;
   font-weight:bold;
   font-family:'lato', sans-serif;
   font-style:normal;
 }
-.testimonialTitle p{
+.testimonialTitle p,
+.testimonial-slider .slides p{
   font-size:20px;
   font-style: italic;
   width:50%;
@@ -586,6 +633,12 @@ footer img{
   color:#ffffff;
   transition: all ease 0.8s;
 }
+.moretestimonial-btn.btnlogin{
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 60px;
+}
+
 .border{
   border:4px solid #008080;
   margin-top:70px;
