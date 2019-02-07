@@ -100,12 +100,15 @@ Slider = function(el){
     });
     //stop my slider when it is hovered
     slider.element.addEventListener("mouseover", function(){
+        if(typeof restartSlider !== 'undefined'){
+            clearTimeout(restartSlider);
+        }
         slider.stopSlider();
     });
     //restart my slider when mouse leave
     slider.element.addEventListener("mouseleave", function(){
-        slider.startSlider();
-    })
+        restartSlider = setTimeout(slider.startSlider, 1000);
+    });
 }
 
 var sliderElement = document.getElementsByClassName("testimonial-slider")[0];
