@@ -14,9 +14,20 @@
 			<img src="icon/logo.png" alt="The Big Tree Logo" id="logo">
 		</div>
 		<div class='register-header'>
-			<a href="index.php?route=pages.login" class="btnlogin">Login</a>
-			<a href="index.php?route=pages.login" class="btnjoin">Join</a>
-
+			<?php
+			if(empty($_SESSION['user'])){
+			?>
+				<a href="index.php?route=pages.login" class="btnlogin">Login</a>
+				<a href="index.php?route=pages.login" class="btnjoin">Join</a>
+			<?php
+			}
+			else if(!empty($_SESSION['user'])){
+			?>
+				<a href="index.php?route=user.logout" class="btnlogin">Logout</a>
+				<a href="index.php?route=pages.dashboard&userID=$_SESSION['user']['id']" class="btnjoin">Profile</a>
+			<?php
+			}
+			?>
 		</div>
 		<div class="nav nav-header">
 			<nav>

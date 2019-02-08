@@ -99,7 +99,13 @@
 
 		public function login()
 		{	
-			$content = $this->loadView("login");
+			$strEmail = (!empty($_SESSION['loginEntries']))?$_SESSION['loginEntries']['strEmail']:'';
+			$error = ($_GET['loginErr'])?'loginError':'';
+			$message = ($_GET['loginErr'])?'Wrong wmail or password':'Login to your account';
+
+			$arrData['loginEntries'] = array ('strEmail'=> $strEmail);
+			$arrData['errorMessage'] = array ( 'error' => $error, 'message' => $message);
+			$content = $this->loadView("login", $arrData);
 			include("Views/publiclayout-view.php");
 		}
 		

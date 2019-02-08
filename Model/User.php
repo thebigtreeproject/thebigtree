@@ -56,18 +56,23 @@
 		}
 		
 		static function login(){
-			
 			$sql = "SELECT * FROM users WHERE users.strEmail='".$_POST['strEmail']."'";
 			$user = DB::con()->runSQL("getSingleData", $sql);
 			$userPass = $user['strPassword'];
+			$_SESSION['loginEntries'] = array('strEmail' => $_POST['strEmail'], 'strPassword' => $_POST['strPassword']);
 			if(password_verify($_POST['strPassword'], $userPass)){
 				$_SESSION['user'] = $user;
-				print_r($user);
 				header('location: ./');
 			}
 			else{
-				echo '<p>Something went wrong please, check your password and user name and try again.</p>';
+				header('location: ./?route=pages.login&loginErr=true');
 			}
+		}
+
+		static function logout(){
+			$_SESSION = [];
+			session_destroy();
+			header('location: ./');
 		}
 		
 		static function submitTestmonial(){
