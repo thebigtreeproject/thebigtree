@@ -25,7 +25,7 @@
 			<p class="name">- <?=$testimonial['strFirstName']?> <?=$testimonial['strLastName']?>, <?=date('Y', $testimonial['nDateUTC'])?></p>
 			<p>"<?=$testimonial['strTestimonial']?>"</p>
 		</div>
-	<?php 
+	<?php
 		}
 	?>
 	</div>
