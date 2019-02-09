@@ -15,19 +15,18 @@
 		public function home()
 		{
 			// home page
-			
 			// to add a hero image in a page just copy the two lines below and change the path for the image
 			$arrData['heroImage'] = 'assets/happy.jpg'; // notice that you need to provide the folder and the name of the image (i.e. ASSETS / IMAGE.JPG)
 			$content = $this->loadView("hero", $arrData);
 			
 			$content .= $this->loadView("homecontent");
-			$content .= $this->loadView("service");
-			$content .= $this->loadView('testimonial');
-			$content .= $this->loadView('border');
+			$arrData['categories'] = Category::getAllCategories();
+			$content .= $this->loadView("service", $arrData);
+			$arrData['testimonials'] = Testimonials::getTestimonials(5);
+			$content .= $this->loadView('testimonialslider', $arrData['testimonials']);
 			$content .= $this->loadView('contact');
 
 			include("Views/publiclayout-view.php");
-
 		}
 
 		public function about()
@@ -38,22 +37,16 @@
 			$content .= $this->loadView('border');
 			$content .= $this->loadView('contact');
 
-			include("Views/publiclayout-view.php");
-			
+			include("Views/publiclayout-view.php");			
 		}
 
 		public function services()
 		{
 			//services page
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
-			$content = $this->loadView("service");
-
 
 			$arrData['categories'] = Category::getAllCategories();
-			$arrData['services'] = Companies::getAll();
-			
-
-			// $content = $this->loadView("services", $arrData);
+			$content = $this->loadView("service", $arrData);		
 			include("Views/publiclayout-view.php");
 		}
 		
@@ -118,6 +111,15 @@
 		public function editprofile()
 		{	
 			$content = $this->loadView("editProfile");
+			include("Views/publiclayout-view.php");
+		}
+
+		public function test(){//services page
+			$nCompanyID = isset($_GET['serviceID'])?$_GET['serviceID']:'';
+			$arrData['service'] = Company::getOne($nCompanyID);
+			$arrData['modalcontent'] = $this->loadView("servicedetails", $arrData['service']);
+			
+			$content = $this->loadView("modalholder", $arrData['modalcontent']);
 			include("Views/publiclayout-view.php");
 		}
 

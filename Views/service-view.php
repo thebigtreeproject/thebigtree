@@ -8,74 +8,24 @@
 	</div>
 	<!--endtitle-->
 	<div class="services-container">
+<?php
+	foreach($arrData['categories'] as $category){
+?>
+
 		<!--article-->
-		<article class="service-item service-item-white">
+		<article class="service-item">
 			<div class="front-text">
-				<img src="icon/doctor.png" alt="doctor icon">
-				<h1>Health Care</h1>
+				<img src="icon/<?=$category['strIconFile']?>" alt="<?=$category['strIconDescription']?>">
+				<h1><?=$category['strName']?></h1>
 			</div>
 			<div class="back-text">
-				<h1>Health Care</h1>
-				<p>Hello, from the other side. I must have called a thousand times. To tell you that I am sorry for breaking your hearth.</p>
-				<a href="#" class="servicebtn">Learn More</a>
-			</div>
-	   </article>
-	   <article class="service-item service-item-black">
-			<div class="front-text">
-				<img src="icon/doctor.png" alt="doctor icon">
-				<h1>Leisure Activities</h1>
-			</div>
-			<div class="back-text">
-				<h1>Leisure Activities</h1>
-				<p>Hello, from the other side. I must have called a thousand times. To tell you that I am sorry for breaking your hearth.</p>
-				<a href="#" class="servicebtn">Learn More</a>
-			</div>
-	   </article>
-	   <article class="service-item service-item-white">
-			<div class="front-text">
-				<img src="icon/doctor.png" alt="doctor icon">
-				<h1>Beauty Care</h1>
-			</div>
-			<div class="back-text">
-				<h1>Beauty Care</h1>
-				<p>Hello, from the other side. I must have called a thousand times. To tell you that I am sorry for breaking your hearth.</p>
-				<a href="#" class="servicebtn">Learn More</a>
-			</div>
-	   </article>
-	   <article class="service-item service-item-black">
-			<div class="front-text">
-				<img src="icon/doctor.png" alt="doctor icon">
-				<h1>Hotel & Travel</h1>
-			</div>
-			<div class="back-text">
-				<h1>Hotel & Travel</h1>
-				<p>Hello, from the other side. I must have called a thousand times. To tell you that I am sorry for breaking your hearth.</p>
-				<a href="#" class="servicebtn">Learn More</a>
-			</div>
-	   </article>
-	   <article class="service-item service-item-white">
-			<div class="front-text">
-				<img src="icon/doctor.png" alt="doctor icon">
-				<h1>Restaurant</h1>
-			</div>
-			<div class="back-text">
-				<h1>Restaurant</h1>
-				<p>Hello, from the other side. I must have called a thousand times. To tell you that I am sorry for breaking your hearth.</p>
-				<a href="#" class="servicebtn">Learn More</a>
-			</div>
-	   </article>
-	   <article class="service-item service-item-black">
-			<div class="front-text">
-				<img src="icon/doctor.png" alt="doctor icon">
-				<h1>Education</h1>
-			</div>
-			<div class="back-text">
-				<h1>Education</h1>
-				<p>Hello, from the other side. I must have called a thousand times. To tell you that I am sorry for breaking your hearth.</p>
-				<a href="#" class="servicebtn">Learn More</a>
+				<h1><?=$category['strName']?></h1>
+				<p><?=$category['strDescription']?></p>
+				<a href=".?route=pages.category&catid=<?=$category['id']?>" class="servicebtn">Learn More</a>
 			</div>
 	   </article>
 	   <!--endarticle-->
+<?php } ?>
 
     </div>
     <!--endservicecontainer-->	   

@@ -5,8 +5,8 @@
 		</div>
 		<div class="blackbox">
 			<h1>About Us</h1>
-			<p>Contrary to popular belief Lorem ipsum is not a simply a random text. It has roots in a piece of classical Latin Literature from 45 BC, making it over 2000 years old.</p>
-			<a href="#" id="btn">Wanna learn more</a>
+			<p>TheBigTree website was made possible by three people that wanted to make a difference for the disabled community.  We know that it can be frustrating to find the right place for your need. Here at TheBigTree, the service is looking for you. All the service you need in one place.</p>
+			<a href="#" id="btn">Learn More</a>
 		</div>
 	</div>
 </section>
