@@ -121,9 +121,6 @@ nav li a{
   top:0;
   padding:20px;
 }
-nav .current{
-    border-bottom:4px solid #008080;
-}
 /* hamburger style */
 div#hamburger-icon {
   display: none;
@@ -250,7 +247,7 @@ div#hamburger-icon.open span:nth-child(6) {
     background: #000;
     opacity: 0.6;
 }
-.modal-holder>
+.modal-holder>* {
     transform: translateX(-50%) translateY(-50%) scale(0);
     background: #fff;
     height: 550px;
@@ -318,6 +315,8 @@ margin-left: 10px;
 {
   max-width: 300px;
 }
+
+
 .container{
     	margin: auto;
     	position: relative;
@@ -707,6 +706,15 @@ input[type="submit"]{
   font-family:'lato',sans-serif;
 }
 
+#info{
+  width:440px;
+  margin:0 auto;
+}
+#info p{
+  font-size:15pt;
+  margin-top:15px;
+  text-align:left;
+}
 /*******END OF HOMEPAGE***********/
 /*******ABOUT PAGE***************/
 .aboutTextTitle{
@@ -730,7 +738,6 @@ input[type="submit"]{
 #section-companies{
   position:relative;
 }
-
 .companies{
   display:grid;
   grid-template-columns: 1fr 1fr;

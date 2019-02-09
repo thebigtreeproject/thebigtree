@@ -25,6 +25,9 @@
 				case 'login':
 					User::login();
 					break;
+				case 'logout':
+					User::logout();
+					break;
 				default:
 					break;
 			}

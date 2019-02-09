@@ -206,9 +206,9 @@ body, .acrylic::before {
 
         <form class="login-form acrylic" method="post" action="index.php?route=user.login">
 
-          <span>Login to your account</span>
+          <span class="<?=$arrData['errorMessage']['error']?>"><?=$arrData['errorMessage']['message']?></span>
           <label class="required contactLabel" for="email">Email</label>
-          <input type="text" name="strEmail" class="nameText" placeholder="ex. abc@abc.com"> 
+          <input type="text" name="strEmail" class="nameText" placeholder="ex. abc@abc.com" value=<?=$arrData['loginEntries']['strEmail']?>> 
 
           <label class="required contactLabel" for="password">Password</label>
           <input type="password" name="strPassword" placeholder="*******">
