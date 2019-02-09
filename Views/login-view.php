@@ -73,8 +73,6 @@
   width: 100%;
   margin: 0 0 15px;
 }
-
-
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
