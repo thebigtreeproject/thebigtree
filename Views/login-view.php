@@ -63,15 +63,16 @@
   opacity: 1;
 }
 .form span{
-  font-family: "Roboto", sans-serif;
+  font-family:'Merriweather', serif;
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  background: #fff;
+  background: #9ACD32;
   opacity: 0.8;
   padding: 10px;
   width: 100%;
   margin: 0 0 15px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
 }
 .form .message {
   margin: 15px 0 0;
@@ -163,7 +164,7 @@ body, .acrylic::before {
 	margin-bottom: 5px;
 	color: #fff;
 	text-align: left;
-  	font-family: "Roboto", sans-serif;
+   font-family:'Merriweather', serif;
 
 }
 </style>

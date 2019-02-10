@@ -5,12 +5,12 @@
 		//if there is no user loged the form will not show
 		if(!empty($_SESSION['user']['id'])){
 	?>
-		<form method='post' action="?route=testimonial.save">
+		<form method='post' class="testimonialForm" action="?route=testimonial.save">
 			<label>Say something about us:</label>
 			<input type="hidden" name="nUserID" value="<?=$_SESSION['user']['id']?>">
 			<input type="hidden" name="nDate" value="<?=time()?>">
 			<textarea name="strTestimonial" cols="30" rows="10"></textarea>
-			<input class="btn btn-primary" type='submit' value='Submit Testimonial'>
+			<input class="testimonial btn btn-primary" type='submit' value='Submit Testimonial'>
 		</form>
 	<?php
 		}

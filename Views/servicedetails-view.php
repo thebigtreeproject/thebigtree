@@ -7,10 +7,10 @@
 	<div class="features">
 		<h1>FEATURES</h1>
 		<ul>
-			<li>After color services</li>
-			<li>Blow outs</li>
-			<li>Make up</li>
-			<li>Wedding</li>
+			<li>&#9679; After color services</li>
+			<li>&#9679; Blow outs</li>
+			<li>&#9679; Make up</li>
+			<li>&#9679; Wedding</li>
 		</ul>
 		<a href="#">VISIT SITE</a>
 	</div><!--features-->
