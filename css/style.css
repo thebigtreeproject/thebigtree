@@ -7,6 +7,7 @@
 	border: none;
 	outline: none;
 	transition: all 0.2s ease;
+
 }
 
 html {
@@ -289,14 +290,14 @@ div#hamburger-icon.open span:nth-child(6) {
 .modal-content .features h1
 {
   margin: 10px;
-  font-family:'Merriweather', serif;
+  font-family: 'Lato', sans-serif;
   color: #008080;
   font-size: 22px;
 }
 
 .modal-content .features ul li
 {
-font-family:'Merriweather', serif;
+font-family: 'Lato', sans-serif;
 margin-bottom: 20px;
 font-size: 18px;
 margin-left: 10px;
@@ -308,7 +309,7 @@ margin-left: 10px;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   margin: 10px;
-  font-family:'Merriweather', serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .modal-content .content img
@@ -322,6 +323,48 @@ margin-left: 10px;
     	position: relative;
     	width: 90%;
 }
+
+/*testimonial form*/
+
+.testimonialForm
+{
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #008080;
+  margin-bottom: 40px;
+}
+
+.testimonialForm label
+{
+  font-size: 20px;
+  color: #ffffff;
+  font-family:'Merriweather', serif;
+}
+.testimonialForm textarea
+{
+  border: 1px solid #ffffff;
+  font-family:'lato', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.testimonialForm .testimonial
+{
+  font-family:'lato', sans-serif;
+  color: #008080;
+  font-size: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.testimonialForm .testimonial:hover
+{
+  font-family:'lato', sans-serif;
+  color: #fff;
+  background-color: #363636;
+  transition: all ease 0.7s;
+}
+
 /*************STYLE FOR EMPTY FIELDS ON FORMS***********/
 .empty{
 	border: 2px solid tomato;
@@ -336,18 +379,19 @@ footer {
     padding:20px;
     display:flex;
     flex-wrap:wrap;
+    margin-top: 8%;
     justify-content: space-between;
     align-items:baseline;
 }
 .footer-text{
     text-transform:uppercase;
-    font-size:15px;
+    font-size:12px;
     color:white;
     margin-bottom:10px;
 }
 
 .footer-icons{
-    font-size:30px;
+    font-size:20px;
 }
 
 .footer-icons .fab{
