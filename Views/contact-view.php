@@ -1,14 +1,12 @@
 <section class="secondHero" id="contact">
-	<div>
-		<h1>Contact Us</h1>
-		
+	<div>   
+		<h1>Contact Us</h1>	
 		<div id="contactForm">
             <div id="info">
 			<p>+ 1 777 777 7777</p>
 		    <p>thebigtree@thebigtree.com</p>
 		    <p>570 Dunsmuir St., Vancouver, BC</p>
-		</div><!--endinfo-->
-                
+		</div><!--endinfo-->              
 			<form method="post" onsubmit="return validate()">
 				<label class="requiredLabel">Full Name: </label>
 				<input type="text" name="strFullName" placeholder="Enter your full name" class="requiredField" id="fullname" value="" required/><br/>
@@ -18,6 +16,6 @@
 				<textarea name="strMessage" id="message" value="" required></textarea>
 				<input type="submit" onClick="validateForm()" name="Submit" class="contactbtn" value="Submit" />
 			</form><!--endform-->
-		</div><!--endcontactForm-->
+		</div><!--endcontactForm-->    
 	</div>
 </section>

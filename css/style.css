@@ -440,7 +440,7 @@ footer {
   color:#ffffff;
 }
 #servicesection{
-    background-image:url("../assets/happykid.jpg");
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../assets/happykid.jpg");
     background-size:cover;
     height:95vh;
   
@@ -461,7 +461,7 @@ footer {
   max-width:150vh;
   margin:0 auto;
   color:pink;
-  min-height: 55vh;
+  min-height: 58vh;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -469,7 +469,7 @@ footer {
 .service-item{
   overflow:hidden;
   position:relative;
-  padding:40px;
+  padding:30px;
 }
 
 .service-item:nth-child(even){
@@ -621,6 +621,10 @@ section.testimslider{
   margin: 0 auto 60px;
 }
 
+.moretestimonial-btn.btnlogin:hover{
+  color:#ffffff;
+ }
+
 /********** teal border *********/
 #section-border{
     margin:80px 0;
@@ -634,12 +638,11 @@ section.testimslider{
 }
 
 /**********contact form*******/
-
 #contact{
   height:800px;
   margin:0 auto;  
   text-align:center;
-  background-image: url("../assets/costumer.jpg");
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../assets/costumer.jpg");
   background-size:cover;
   padding:40px;
   background-position:center; 
@@ -648,7 +651,7 @@ section.testimslider{
 
 #contact h1{
   font-size:30pt;
-  color:#3b3b3b;
+  color:#ffffff;
 }
 #contact form{
   background:linear-gradient(rgba(0,128,128,0.6), rgba(0,128,128,0.6));
@@ -692,29 +695,23 @@ section.testimslider{
 }
 #contactForm input::placeholder{
   color:#686868/*grey*/
-
 }
-#info{
-  width:570px;
+
+#info{ 
   margin:0 auto;
   padding:20px;
+  width:600px;
 }
+
 #info p{
   font-size:15pt;
   margin-top:15px;
   text-align:left;
   font-family:'lato',sans-serif;
+  color:#ffffff;
+ 
 }
 
-#info{
-  width:440px;
-  margin:0 auto;
-}
-#info p{
-  font-size:15pt;
-  margin-top:15px;
-  text-align:left;
-}
 /*******END OF HOMEPAGE***********/
 /*******ABOUT PAGE***************/
 .aboutTextTitle{
@@ -737,6 +734,7 @@ section.testimslider{
 
 #section-companies{
   position:relative;
+  
 }
 .companies{
   display:grid;
@@ -754,23 +752,57 @@ section.testimslider{
   top:30px;;
   margin:0 auto;
   width:40%;
+  color:#ffffff;
+  padding:20px;
 }
 .companies p{
-  width:20%;
+  width:60%;
   text-align:justify;
-  font-size:20px;
+  font-size:25px;
   position:absolute;
   top:100px;
   font-family:'lato', sans-serif;
-  margin-left:150px;
+  margin-left:120px;
   color:#ffffff;
-  
-}
-.companies img{
-  width:500px;
-  height:350px;  
+  line-height: 30px;    
 }
 
+.btn3{
+   padding:25px;
+   display:block;
+   background-color:#008080;
+   font-size:40px;
+   font-family:'lato', sans-serif;
+   color:#ffffff;
+   cursor: pointer;
+   width:88%;
+   margin:0 auto;   
+}
+
+.btn3:hover{
+    color:#008080;
+    background-color:#ffffff;
+}
+.companies img{
+  width:502px;
+  height:352px;  
+}
+
+span.grey-overlay{
+	display: inline-block;
+	position: relative;
+}
+
+span.grey-overlay::before{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background: #000000;
+	opacity: 0.6;
+}
 /*********END ABOUT PAGE*******************/
 /********SERVICE PAGE****************/
 
@@ -807,10 +839,25 @@ div.iconmiddle{
 }
 
 .icontop img, .iconmiddle img, .iconbottom img{
-width:50px;
+  width:50px;
 
 }
-/******* COMPANIES LIST ON CATEGORY PAGE *******/
+
+div.info-text {
+  margin:40px 0;
+}
+
+div.info-text p{
+  width:80%;
+  font-size:20px;
+  line-height:30px;
+  font-family:'lato', sans-serif;
+  margin:20px 0;
+  margin-left:150px;
+  margin-bottom:50px;   
+}
+
+/***** COMPANIES LIST ON CATEGORY PAGE *******/
 ul.complist{
 	display: none;
 }

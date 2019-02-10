@@ -35,7 +35,6 @@
 			$content = $this->loadView("hero", $arrData);	
 			$content .= $this->loadView("about");
 			$content .= $this->loadView('border');
-			$content .= $this->loadView('contact');
 
 			include("Views/publiclayout-view.php");			
 		}
@@ -46,7 +45,8 @@
 			$categoryID = isset($_GET['categoryID'])?$_GET['categoryID']:'';
 
 			$arrData['categories'] = Category::getAllCategories();
-			$content = $this->loadView("service", $arrData);		
+            $content = $this->loadView("serviceinfo");
+			$content .= $this->loadView("service", $arrData);
 			include("Views/publiclayout-view.php");
 		}
 		
