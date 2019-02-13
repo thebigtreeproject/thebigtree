@@ -2,11 +2,13 @@
 
 	class MainController
 	{
-		var $userLoged = '';
+		var $userLoged = false;
 		function __construct()
 		{
 			//check the user to be able to use the pages;
-			$this->userLoged = true;
+			if(!empty($_SESSION['user'])){
+				$this->userLoged = true;
+			}
 		}
 		public function pages($action)
 		{
@@ -35,27 +37,37 @@
 		}
 		public function company($action)
 		{
-			switch ($action){
-				case 'save':
-					Company::save();
-					break;
-				case 'activate':
-					Company::confirm();
-					break;
-				default:
-					break;
+			if($this->userLoged === true){
+				switch ($action){
+					case 'save':
+						Company::save();
+						break;
+					case 'activate':
+						Company::confirm();
+						break;
+					default:
+						break;
+				}
+			}
+			else{
+				header('location: ./?route=pages.login');
 			}
 			
 		}
 		public function testimonial($action)
 		{
-			switch ($action){
-				case 'save':
-					Testimonials::submit();
-					header('location: ./?route=pages.testimonials');
-					break;
-				default:
-					break;
+			if($this->userLoged === true){
+				switch ($action){
+					case 'save':
+						Testimonials::submit();
+						header('location: ./?route=pages.testimonials');
+						break;
+					default:
+						break;
+				}
+			}
+			else{
+				header('location: ./?route=pages.login');
 			}
 			
 		}

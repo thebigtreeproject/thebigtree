@@ -1,5 +1,5 @@
 <?php
-	class PagesController{	
+	class PagesController extends MainController{	
 		//Get the content inside views apllying the data for that
 		public function loadView($viewName ,$arrData= "")
 		{
@@ -90,10 +90,15 @@
 			include("Views/publiclayout-view.php");
 		}
 
-		public function memberdashboard()
+		public function dashboard()
 		{	
-			$content = $this->loadView("memberDashboard");
-			include("Views/publiclayout-view.php");
+			if($this->userLoged === true){
+				$content = $this->loadView("dashboard");
+				include("Views/publiclayout-view.php");
+			}
+			else{
+				header('location: ./?route=pages.login');
+			}
 		}
 
 		public function login()
