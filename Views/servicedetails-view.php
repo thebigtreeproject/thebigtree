@@ -1,7 +1,11 @@
 <div class="modal-content">
 	<h1> <?=$arrData['strName']?></h1>
 	<div class="content">
-		<img src="assets/<?=$arrData['strLogoFile']?>" alt="Aoki restaurant images">
+		<div class="containBg">
+			<span>
+				<img src="assets/<?=$arrData['strLogoFile']?>" alt="<?=$arrData['strName']?> logo">
+			</span>
+		</div>
 		<p><?=$arrData['strDescription']?></p>
 	</div><!--content-->
 	<div class="features">

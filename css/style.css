@@ -256,6 +256,9 @@ div#hamburger-icon.open span:nth-child(6) {
     transition: all 1.2s ease;
     padding: 20px;
 }
+.modal-holder .containBg{
+  height: 150px;
+}
 #modal-close{
   display: inline-block;
   position: absolute;
@@ -941,84 +944,6 @@ a.btn.alpha-filter:hover{
   color:#008080;
 }
 
-<<<<<<< HEAD
-/******* Media Query *********/
-/******** Mobile Responsive ********/
-@media only screen and (max-width: 320px){
-
-.heroImage img{
-  width:320px;
-  height:320px;
-} 
-#about{
-  height: 400px;
-}
-.about img{
-  width:320px;
-  height:340px;
-}
-.blackbox{
-  float:left;
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-  width:320px;
-  height:340px;
-  margin-top:50px;
-}
-.about-holder h1{
-  font-size:20px;
-}
-.blackbox p{
-  font-size:16px;
-  line-height:20px;
-}
-#btn{
-  bottom: 20px;
-}
-#servicesection{
-  height:100%;
-  width:320px;
-  background-image:none;
-  background-color:black;
-  opacity:0.8;
-}
-.title-text{
-
-font-size:20pt;
-}
-.services-container{
-  max-width:320px;
-  grid-template-columns: 1fr;
-}
-.service-item img{
-  width:40px;
-}
-.service-item h1{
-  font-size:18px;
-}
-.front-text{
-  font-size:16pt;
-}
-
-.back-text{
-  width:320px;
-  height:100%;
-  line-height:15px;
-}
-.back-text p{
-  width:80%;
-}
-.back-text a.servicebtn{
-  font-size:16px;
-  padding:2px;
-  line-height:40px;
-  border:2px solid #008080;
-}
-section.testimslider{
-  width:320px;    
-}
-
-}
-=======
 /***** DASH BOARD STYLE ON DASHBOARD PAGE ******/
 div#dashboard-nav {
   display: flex;
@@ -1080,4 +1005,3 @@ transform: scale(1.1);
 }
 
 /******* ENDO OF DASH BOARD STYLE ON DASHBOARD PAGE ******/
->>>>>>> 95054008f8948ad4b85d231638bad5789e6eadca
