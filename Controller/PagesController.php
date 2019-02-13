@@ -93,7 +93,11 @@
 		public function dashboard()
 		{	
 			if($this->userLoged === true){
-				$content = $this->loadView("dashboard");
+				$arrData['user'] = $_SESSION['user'];
+				$arrData['userCompanies'] = Companies::getUserCompanies($_SESSION['user']['id']);
+				if($arrData['user'] && $arrData['userCompanies']){
+					$content = $this->loadView("dashboard", $arrData);
+				}
 				include("Views/publiclayout-view.php");
 			}
 			else{

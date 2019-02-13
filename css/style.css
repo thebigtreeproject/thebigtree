@@ -905,3 +905,65 @@ div.info-text p{
 ul.complist{
 	display: none;
 }
+
+/***** DASH BOARD STYLE ON DASHBOARD PAGE ******/
+div#dashboard-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 15%;
+}
+div#dashboard-nav .dashboard-options>a>h3 {
+  display: inline;
+}
+div#dashboard-nav a {
+  margin: 0;
+}
+div#dashboard-content{
+text-align: center;
+}
+.usercompanies-list{
+display: inline-block;
+width: 500px;
+margin: 40px auto;
+}
+.usercompanies-list li{
+position: relative;
+text-align: left;
+display: inline-block;
+width: 100%;
+padding: 10px 10px;
+  border-bottom: 1px solid #008080;
+display: flex;
+justify-content: start;
+}
+.usercompanies-list li> .usercompany-logo{
+position: relative;
+width: 100px;
+height: 80px;
+}
+.usercompanies-list li> .usercompany-info{
+flex-grow: 1;
+}
+.usercompanies-list li> .usercompany-info h3{
+font-family:'Merriweather', serif;
+margin: 15px 20px;
+}
+.usercompanies-list li> .usercompany-info p{
+margin: 15px 20px;
+}
+.usercompanies-list li> .usercompany-logo img{
+height: 100%;
+width: 100%;
+}
+.usercompanies-list li> a{
+display: inline-block;
+width: 100px;
+padding: 10px;
+border: none;
+color: #008080;
+}
+.usercompanies-list li> a:hover{
+transform: scale(1.1);
+}
+
+/******* ENDO OF DASH BOARD STYLE ON DASHBOARD PAGE ******/
