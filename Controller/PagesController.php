@@ -1,5 +1,5 @@
 <?php
-	class PagesController{	
+	class PagesController extends MainController{	
 		//Get the content inside views apllying the data for that
 		public function loadView($viewName ,$arrData= "")
 		{
@@ -90,17 +90,26 @@
 			include("Views/publiclayout-view.php");
 		}
 
-		public function memberdashboard()
+		public function dashboard()
 		{	
-			$content = $this->loadView("memberDashboard");
-			include("Views/publiclayout-view.php");
+			if($this->userLoged === true){
+				$arrData['user'] = $_SESSION['user'];
+				$arrData['userCompanies'] = Companies::getUserCompanies($_SESSION['user']['id']);
+				if($arrData['user'] && $arrData['userCompanies']){
+					$content = $this->loadView("dashboard", $arrData);
+				}
+				include("Views/publiclayout-view.php");
+			}
+			else{
+				header('location: ./?route=pages.login');
+			}
 		}
 
 		public function login()
 		{	
 			$strEmail = (!empty($_SESSION['loginEntries']))?$_SESSION['loginEntries']['strEmail']:'';
-			$error = ($_GET['loginErr'])?'loginError':'';
-			$message = ($_GET['loginErr'])?'Wrong wmail or password':'Login to your account';
+			$error = !empty($_GET['loginErr'])?'loginError':'';
+			$message = !empty($_GET['loginErr'])?'Wrong wmail or password':'Login to your account';
 
 			$arrData['loginEntries'] = array ('strEmail'=> $strEmail);
 			$arrData['errorMessage'] = array ( 'error' => $error, 'message' => $message);

@@ -19,5 +19,17 @@
 				LEFT JOIN categories ON categories.id=companies_categories.nCategoryID";
 			return DB::con()->runSQL("getAllData", $sql);
 		}
+		static function getUserCompanies($nUserID){
+			$sql = "SELECT 
+				companies.id,
+				companies.strName,
+				companies.strAddress,
+				companies.strLogoFile			
+			FROM 
+				companies
+			WHERE
+				companies.nUserID='".$nUserID."'";
+			return DB::con()->runSQL("getAllData", $sql);
+		}
 	}
 ?>
