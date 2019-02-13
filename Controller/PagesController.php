@@ -99,8 +99,8 @@
 		public function login()
 		{	
 			$strEmail = (!empty($_SESSION['loginEntries']))?$_SESSION['loginEntries']['strEmail']:'';
-			$error = ($_GET['loginErr'])?'loginError':'';
-			$message = ($_GET['loginErr'])?'Wrong wmail or password':'Login to your account';
+			$error = !empty($_GET['loginErr'])?'loginError':'';
+			$message = !empty($_GET['loginErr'])?'Wrong wmail or password':'Login to your account';
 
 			$arrData['loginEntries'] = array ('strEmail'=> $strEmail);
 			$arrData['errorMessage'] = array ( 'error' => $error, 'message' => $message);
