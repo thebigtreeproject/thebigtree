@@ -1,4 +1,4 @@
-<section id="servicesection">
+<section id="servicesection" class="<?=($_GET['route'] == 'pages.services')?'noBg':'applyBg';?>">
 	<!--titleText-->
 	<div class="title">
 		<div class="title-text">

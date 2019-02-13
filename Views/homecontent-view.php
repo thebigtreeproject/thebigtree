@@ -1,3 +1,8 @@
+<section>
+	<video width="320" height="240" controls>
+		 <source src="assets/herovideo.mp4" type="video/mp4">
+	</video>
+</section>
 <section id="about">
 	<div class="about-holder">
 		<div class="about">

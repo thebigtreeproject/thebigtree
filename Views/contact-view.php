@@ -8,12 +8,12 @@
 		    <p>570 Dunsmuir St., Vancouver, BC</p>
 		</div><!--endinfo-->              
 			<form method="post" onsubmit="return validate()">
-				<label class="requiredLabel">Full Name: </label>
-				<input type="text" name="strFullName" placeholder="Enter your full name" class="requiredField" id="fullname" value="" required/><br/>
-				<label class="requiredLabel">Email Address:</label>
-				<input type="email" name="strEmailAddress" placeholder="Enter your email address" class="requiredField" id="emailAddress" value="" required/><br/>
-				<label class="requiredLabel">Message:</label>
-				<textarea name="strMessage" id="message" value="" required></textarea>
+				<label class="required">Full Name: </label>
+				<input type="text" name="strFullName" placeholder="Enter your full name" class="requiredField" id="fullname" value=""><br/>
+				<label class="required">Email Address:</label>
+				<input type="email" name="strEmailAddress" placeholder="Enter your email address" class="requiredField" id="emailAddress" value=""><br/>
+				<label class="required">Message:</label>
+				<textarea name="strMessage" id="message" value="" ></textarea>
 				<input type="submit" onClick="validateForm()" name="Submit" class="contactbtn" value="Submit" />
 			</form><!--endform-->
 		</div><!--endcontactForm-->    

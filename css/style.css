@@ -12,7 +12,7 @@
 
 html {
 	height: 100%;
-    position:relative;
+  position:relative;
 }
 body {
 	min-height: 100%;
@@ -379,7 +379,7 @@ footer {
     padding:20px;
     display:flex;
     flex-wrap:wrap;
-    margin-top: 8%;
+    /* margin-top: */
     justify-content: space-between;
     align-items:baseline;
 }
@@ -484,11 +484,21 @@ footer {
   color:#ffffff;
 }
 #servicesection{
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../assets/happykid.jpg");
-    background-size:cover;
-    height:95vh;
+  height:95vh;
+}
+#servicesection.applyBg{
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../assets/happykid.jpg");
+  background-size:cover;
+}
+#servicesection.noBg{
+  background: #3b3b3b;
+  width:85%;
+  margin:0 auto;
+  height:75vh;
+  margin-bottom:50px;
   
 }
+
 .title{
   margin:20px 0;
 }
@@ -505,7 +515,7 @@ footer {
   max-width:150vh;
   margin:0 auto;
   color:pink;
-  min-height: 58vh;
+  min-height: 55vh;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -513,7 +523,7 @@ footer {
 .service-item{
   overflow:hidden;
   position:relative;
-  padding:30px;
+  padding:50px;
 }
 
 .service-item:nth-child(even){
@@ -691,6 +701,7 @@ section.testimslider{
   padding:40px;
   background-position:center; 
   position:relative;
+  margin-top:20px;
 }
 
 #contact h1{
@@ -812,15 +823,16 @@ section.testimslider{
 }
 
 .btn3{
-   padding:25px;
+   padding:15px;
    display:block;
    background-color:#008080;
    font-size:40px;
    font-family:'lato', sans-serif;
    color:#ffffff;
    cursor: pointer;
-   width:88%;
-   margin:0 auto;   
+   width:50%;
+   margin:0 auto; 
+   margin-top:20px;  
 }
 
 .btn3:hover{
@@ -884,7 +896,6 @@ div.iconmiddle{
 
 .icontop img, .iconmiddle img, .iconbottom img{
   width:50px;
-
 }
 
 div.info-text {
@@ -903,5 +914,106 @@ div.info-text p{
 
 /***** COMPANIES LIST ON CATEGORY PAGE *******/
 ul.complist{
-	display: none;
+  display: none;
+}
+
+#category-class{
+  margin:0 auto;
+  text-align:center;
+}
+
+#category-class p{
+  margin:20px 0px;
+  font-size:15pt;
+  font-family:'lato', sans-serif;
+  font-weight:bold;
+  color:#008080;
+}
+
+a.btn.alpha-filter{
+  font-size:25pt;
+  color:#000000;
+  font-family:'lato', sans-serif;
+}
+
+a.btn.alpha-filter:hover{
+  border-bottom:4px solid #008080;
+  color:#008080;
+}
+
+/******* Media Query *********/
+/******** Mobile Responsive ********/
+@media only screen and (max-width: 320px){
+
+.heroImage img{
+  width:320px;
+  height:320px;
+} 
+#about{
+  height: 400px;
+}
+.about img{
+  width:320px;
+  height:340px;
+}
+.blackbox{
+  float:left;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+  width:320px;
+  height:340px;
+  margin-top:50px;
+}
+.about-holder h1{
+  font-size:20px;
+}
+.blackbox p{
+  font-size:16px;
+  line-height:20px;
+}
+#btn{
+  bottom: 20px;
+}
+#servicesection{
+  height:100%;
+  width:320px;
+  background-image:none;
+  background-color:black;
+  opacity:0.8;
+}
+.title-text{
+
+font-size:20pt;
+}
+.services-container{
+  max-width:320px;
+  grid-template-columns: 1fr;
+}
+.service-item img{
+  width:40px;
+}
+.service-item h1{
+  font-size:18px;
+}
+.front-text{
+  font-size:16pt;
+}
+
+.back-text{
+  width:320px;
+  height:100%;
+  line-height:15px;
+}
+.back-text p{
+  width:80%;
+}
+.back-text a.servicebtn{
+  font-size:16px;
+  padding:2px;
+  line-height:40px;
+  border:2px solid #008080;
+}
+section.testimslider{
+  width:320px;    
+}
+
 }

@@ -2,11 +2,10 @@
 	// If there is no data about the category, show error
 	if($arrData['category']){
 ?>
-
-<h2><?=$arrData['category']['strName']?></h2>
-<img src="images/<?=$arrData['category']['strCoverFile']?>" alt="<?=$arrData['category']['strCoverDescription']?>">
-<p><?=$arrData['category']['strDescription']?></p>
-
+<section id="category-class">
+	<h2><?=$arrData['category']['strName']?></h2>
+	<img src="images/<?=$arrData['category']['strCoverFile']?>" alt="<?=$arrData['category']['strCoverDescription']?>">
+	<p><?=$arrData['category']['strDescription']?></p>
 <?php
 	$arrAlphebet = range('A', 'Z');
 	$initialsFilter = '';
@@ -67,3 +66,4 @@ else {
 <?php
 } //end of ELSE
 ?>
+</section>

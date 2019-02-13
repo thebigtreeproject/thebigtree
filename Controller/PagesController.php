@@ -16,10 +16,10 @@
 		{
 			// home page
 			// to add a hero image in a page just copy the two lines below and change the path for the image
-			$arrData['heroImage'] = 'assets/happy.jpg'; // notice that you need to provide the folder and the name of the image (i.e. ASSETS / IMAGE.JPG)
-			$content = $this->loadView("hero", $arrData);
+			// $arrData['heroImage'] = 'assets/happy.jpg'; // notice that you need to provide the folder and the name of the image (i.e. ASSETS / IMAGE.JPG)
+			// $content = $this->loadView("hero", $arrData);
 			
-			$content .= $this->loadView("homecontent");
+			$content = $this->loadView("homecontent");
 			$arrData['categories'] = Category::getAllCategories();
 			$content .= $this->loadView("service", $arrData);
 			$arrData['testimonials'] = Testimonials::getTestimonials(5);
