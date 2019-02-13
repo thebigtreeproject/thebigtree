@@ -21,7 +21,7 @@
 		}
 		foreach($arrData as $testimonial){
 	?>
-		<div>
+		<div class="testimonial-holder">
 			<p class="name">- <?=$testimonial['strFirstName']?> <?=$testimonial['strLastName']?>, <?=date('Y', $testimonial['nDateUTC'])?></p>
 			<p>"<?=$testimonial['strTestimonial']?>"</p>
 		</div>

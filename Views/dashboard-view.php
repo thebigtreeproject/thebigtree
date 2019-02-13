@@ -56,7 +56,7 @@
 						<li data-companyid="<?=$company['id']?>">
 							<div class="usercompany-logo containBg">
 								<span>
-									<img src="images/<?=$company['strLogoFile']?>" alt="<?=$company['strName']?> logo">
+									<img src="assets/<?=$company['strLogoFile']?>" alt="<?=$company['strName']?> logo">
 								</span>
 							</div>
 							<div class="usercompany-info">
