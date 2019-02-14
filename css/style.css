@@ -408,7 +408,22 @@ footer {
     transform:translateY(-15px);
 }
 /**********HOME PAGE*************/
-
+.hero-video video{  
+  width: 100%;
+}
+.hero-video video+span{  
+  display: inline-block;
+  position: absolute;
+  width: 30%;
+  height: 400px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 50%;
+  margin: auto;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
 .heroImage{
     margin:20px 0;
 }
