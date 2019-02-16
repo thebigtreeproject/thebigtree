@@ -21,6 +21,9 @@
 				case 'save':
 					User::save();
 					break;
+				case 'update':
+					User::update();
+					break;
 				case 'activate':
 					User::confirm();
 					break;
@@ -45,14 +48,17 @@
 					case 'activate':
 						Company::confirm();
 						break;
+					case 'editcompany':
+						$nCompanyID = $_GET['svcid'];
+						$nUserID = $_SESSION['user']['id'];
+						Company::getForForm($nCompanyID, $nUserID);
 					default:
 						break;
 				}
 			}
 			else{
 				header('location: ./?route=pages.login');
-			}
-			
+			}			
 		}
 		public function testimonial($action)
 		{
@@ -69,7 +75,6 @@
 			else{
 				header('location: ./?route=pages.login');
 			}
-			
 		}
 	}
 

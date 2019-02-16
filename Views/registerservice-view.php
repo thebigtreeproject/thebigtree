@@ -1,36 +1,46 @@
-<form method="post" action="index.php?route=company.save" onsubmit="return validate()">
-	<input type="hidden" name="nUserID" value="<?=$_SESSION['user']['id'];?>">
+<form method="post" action="index.php?route=company.save" onsubmit="return validate()" enctype="multipart/form-data">
+	<input type="hidden" name="nUserID" value="<?=$arrData['user']['id'];?>">
 	
-	<label class="required">Company Name:</label>
-	<input type="text" name="strName">
+	<span class="formsection">
+		<h2>New Service</h2>
+
+		<label class="required">Company Name:</label>
+		<input type="text" name="strName">
+		
+		<label class="required">Company Address:</label>
+		<input type="text" name="strAddress">
+		
+		<label class="required">Email for contact:</label>
+		<input type="email" name="strEmail">
+		
+		<label>Phone Number:</label>
+		<input type="text" name="nPhone">
+		
+		<label class="required">Service Description</label>
+		<textarea name="strDescription"></textarea>
+	</span>
 	
-	<label class="required">Company Address:</label>
-	<input type="text" name="strAddress">
-	
-	<label class="required">Email for contact:</label>
-	<input type="email" name="strEmail">
-	
-	<label>Phone Number:</label>
-	<input type="text" name="nPhone">
-	
-	<label class="required">Service Description</label>
-	<textarea name="strDescription"></textarea>
-	
-	<label class="required">Service Category:</label>
-	<div>
-<?php foreach($arrData as $service){?>
-	<input type="checkbox" value="<?=$service["id"]?>" name="categories[]"> <?= $service["strName"] ?>
+	<span class="formsection">
+		<label class="required">Service Category:</label>
+		<div>
+			<ul>
+<?php foreach($arrData['categories'] as $service){?>
+				<li>
+					<input type="checkbox" value="<?=$service["id"]?>" name="categories[]"> <?=$service["strName"]?>
+				</li>
 <?php } ?>
-	</div>
-	
-	<label class="required">Averege Price:</label>
-	<input type="text" name="nPrice" id="">
-	
-	<label>Company logo:</label>
-	<input type="file" accept="image/png, image/jpeg">
-	
-	<label>Service cover image:</label>
-	<input type="file" accept="image/jpeg, image/png">
-	
-	<input type="submit"  class="btn btn-primary"><br>
+			</ul>
+		</div>
+		
+		<label class="required">Averege Price:</label>
+		<input type="text" name="nPrice" id="">
+		
+		<label>Company logo:</label>
+		<input type="file" name="strLogoFile" accept="image/png, image/jpeg">
+		
+		<label>Service cover image:</label>
+		<input type="file" name="strCoverFile" accept="image/jpeg, image/png">
+		
+		<input type="submit"  class="btn btn-primary"><br>
+	</span>
 </form>
