@@ -73,8 +73,7 @@ Class Company{
 			companies.strLogoFile,
 			companies.strCoverFile,
 			companies.nUserID,
-			companies_categories.nCategoryID,
-			categories.strName as strCategoryName				
+			GROUP_CONCAT(companies_categories.nCategoryID) as nCategoriesID		
 		FROM 
 			companies 
 			LEFT JOIN companies_categories ON companies.id=companies_categories.nCompanyID 
@@ -85,9 +84,12 @@ Class Company{
 	}
 
 	static function getForForm($nCompanyID, $nUserID){
-		$comapny = self::getOne($nUserID);
+		$comapny = self::getOne($nCompanyID);
 		if($comapny['nUserID'] == $nUserID){
-			echo "Tu memo";
+			echo json_encode($comapny);
+		}
+		else{
+			echo "Something went wrong please try again";
 		}
 		die;
 	}

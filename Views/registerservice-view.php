@@ -37,9 +37,7 @@
 		
 		<label>Company logo:</label>
 		<input type="file" name="strLogoFile" accept="image/png, image/jpeg">
-		
-		<label>Service cover image:</label>
-		<input type="file" name="strCoverFile" accept="image/jpeg, image/png">
+		<span></span>
 		
 		<input type="submit"  class="btn btn-primary"><br>
 	</span>

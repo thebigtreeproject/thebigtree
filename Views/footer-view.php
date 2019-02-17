@@ -18,5 +18,6 @@
 		<script src="js/login.js"></script>
 		<script src="js/slider.js"></script>		
 		<script src="js/videocontrols.js"></script>
+		<script src="js/updatepage.js"></script>
 	</body>
 </html>

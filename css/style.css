@@ -973,7 +973,7 @@ a.btn.alpha-filter:hover{
 div#dashboard-nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 10px 15%;
+  padding: 10px 0;
 }
 div#dashboard-nav .dashboard-options>a>h3 {
   display: inline;
@@ -991,14 +991,17 @@ div#dashboard-content{
   position: absolute;
   display: flex;
   justify-content: space-around;
-  left: -200%;
+  left: 0;
   top: 0;
   width: 300%;
+  transition: left 0.4s ease;
 }
 #dashboard-slideholder>*{
   margin-top: 30px;
-  width: 500px;
-  float: left;
+  width: 33%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 #dashboard-slideholder>* h2 {
   margin-top: 0;
@@ -1056,6 +1059,13 @@ div#dashboard-content .update-user input,
   position: relative;
   bottom: 1px;
   margin: 6px 0;
+}
+#service-form input[type="file"] + span{
+  display: inline-block;
+  height: 60px;
+}
+#service-form input[type="file"] + span > img{
+  height: 100%;
 }
 
 #service-form textarea{

@@ -49,9 +49,10 @@
 						Company::confirm();
 						break;
 					case 'editcompany':
-						$nCompanyID = $_GET['svcid'];
+						$nCompanyID = $_POST['svcid'];
 						$nUserID = $_SESSION['user']['id'];
 						Company::getForForm($nCompanyID, $nUserID);
+						break;
 					default:
 						break;
 				}
