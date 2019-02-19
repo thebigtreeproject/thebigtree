@@ -526,7 +526,7 @@ footer {
   font-size:25pt;
   color:#ffffff;
   font-family:'Merriweather', serif;
-   padding:20px;
+  padding:20px;
 }
 
 .services-container{
@@ -931,13 +931,17 @@ div.info-text {
 }
 
 div.info-text p{
-  width:80%;
-  font-size:20px;
-  line-height:30px;
+  font-size:30px;
+  line-height:40px;
   font-family:'lato', sans-serif;
-  margin:20px 0;
   margin-left:150px;
-  margin-bottom:50px;   
+  margin-bottom:50px; 
+  font-weight:500;  
+}
+
+.services-name{
+  font-size:30px;
+  color:#008080;
 }
 
 /***** COMPANIES LIST ON CATEGORY PAGE *******/
@@ -952,21 +956,21 @@ ul.complist{
 
 #category-class p{
   margin:20px 0px;
-  font-size:15pt;
+  font-size:20pt;
   font-family:'lato', sans-serif;
-  font-weight:bold;
-  color:#008080;
+  color:#000000;
 }
 
 a.btn.alpha-filter{
   font-size:25pt;
-  color:#000000;
+  color:#008080;
   font-family:'lato', sans-serif;
+  margin-left:25px;
 }
 
 a.btn.alpha-filter:hover{
   border-bottom:4px solid #008080;
-  color:#008080;
+  color:#000000;
 }
 
 /***** DASH BOARD STYLE ON DASHBOARD PAGE ******/
