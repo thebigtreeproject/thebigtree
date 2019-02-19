@@ -1,0 +1,271 @@
+@media only screen and (max-width: 1000px) {
+/*header*/
+#logo
+{
+	max-width: 120px;
+}
+nav li a
+{
+	font-size: 18px;
+}
+nav li
+{
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.btnlogin
+{
+	font-size: 18px;
+}
+.btnjoin
+{
+	font-size: 18px;
+}
+.hero-video video+span{  
+width: 20%;
+}
+/*end of header*/
+/*about*/
+.about-holder h1{
+	font-size: 30px;
+}
+.blackbox p{
+	font-size: 15px;
+	margin-right: 10px;
+	margin-bottom: 40px;
+}
+.blackbox
+{
+	width: 300px;
+	margin-right: 30px;
+}
+#btn
+{
+	margin-top: 20px;
+	font-size: 14px;
+}
+.about img
+{
+	height: 90%;
+}
+.hero-video video+span{  
+width: 15%;
+}
+.hero-video video{  
+  margin-top: 2%;
+}
+/*end of about*/
+}
+
+@media only screen and (max-width: 800px) {
+/*header*/
+#logo
+{
+	max-width: 120px;
+}
+nav
+{
+	margin-right: 50px;
+}
+nav li a
+{
+	font-size: 18px;
+}
+nav li
+{
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.btnlogin
+{
+	font-size: 18px;
+	margin-right: 80px;
+}
+.btnjoin
+{
+	margin-right: 80px;
+	font-size: 18px;
+}
+.hero-video video+span{  
+width: 20%;
+}
+/*end of header*/
+
+/*about*/
+.about-holder h1{
+	font-size: 30px;
+}
+.blackbox p{
+	font-size: 15px;
+	margin-right: 10px;
+	margin-bottom: 40px;
+}
+.blackbox
+{
+	width: 300px;
+	margin-right: 30px;
+}
+#btn
+{
+	margin-top: 20px;
+	font-size: 14px;
+}
+.about img
+{
+	height: 90%;
+}
+.hero-video video+span{  
+width: 15%;
+}
+.hero-video video{  
+  margin-top: 2%;
+}
+/*end of about*/
+}
+
+@media only screen and (max-width: 625px) {
+/*header*/
+#logo
+{
+	max-width: 110px;
+}
+nav
+{
+	margin-right: 200px;
+}
+nav li a
+{
+	font-size: 13px;
+}
+nav li
+{
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.register-header a
+{
+	font-size: 12px;
+}
+.btnlogin
+{
+	font-size: 12px;
+	margin-right: 180px;
+}
+.btnjoin
+{
+	margin-right: 200px;
+	font-size: 12px;
+}
+.hero-video video+span{  
+width: 20%;
+}
+/*end of header*/
+
+/*about*/
+.about-holder h1{
+	font-size: 25px;
+}
+.blackbox p{
+	font-size: 13px;
+	margin-bottom: 40px;
+}
+.blackbox
+{
+	width:280px;
+	margin-right: 200px;
+	height: 450px;
+}
+#btn
+{
+	margin-top: 20px;
+	font-size: 12px;
+}
+.about img
+{
+	margin-top: 40px;
+	height: 70%;
+}
+.hero-video video{  
+  max-width: 80%;
+  margin-top: 2%;
+}
+.hero-video video+span{  
+width: 15%;
+}
+/*end of about*/
+}
+
+@media only screen and (max-width: 500px) {
+/*header*/
+#logo
+{
+	max-width: 110px;
+}
+nav
+{
+	margin-right: 280px;
+}
+nav li a
+{
+	font-size: 12px;
+}
+nav li
+{
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.register-header a
+{
+	font-size: 12px;
+}
+.btnlogin
+{
+	font-size: 12px;
+	margin-right: 230px;
+}
+.btnjoin
+{
+	margin-right: 280px;
+	font-size: 12px;
+}
+.hero-video video+span{  
+width: 20%;
+}
+/*end of header*/
+
+/*about*/
+.about-holder h1{
+	font-size: 25px;
+}
+.blackbox p{
+	font-size: 12px;
+	margin-right: 10px;
+	margin-bottom: 40px;
+	padding-right: 10px;
+}
+.blackbox
+{
+	width:280px;
+	margin-right: 280px;
+	height: 450px;
+}
+#btn
+{
+	margin-top: 20px;
+	font-size: 12px;
+}
+.about img
+{
+	margin-top: 40px;
+	height: 60%;
+}
+.hero-video video{  
+  max-width: 70%;
+  margin-top: 2%;
+}
+.hero-video video+span{  
+width: 15%;
+}
+/*end of about*/
+
+}
