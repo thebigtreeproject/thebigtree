@@ -1,7 +1,11 @@
-<section>
-	<video width="320" height="240" controls>
-		 <source src="assets/herovideo.mp4" type="video/mp4">
+<section class="hero-video">
+	<video muted>
+		<source src="assets/herovideo.mp4" type="video/mp4">
+		Your browser does not support the video tag.
 	</video>
+	<span class="containBg">
+		<img width="100" height="100" src="icon/logo.png" alt="The Big Tree Logo">
+	</span>
 </section>
 <section id="about">
 	<div class="about-holder">

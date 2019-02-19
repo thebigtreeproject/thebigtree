@@ -11,7 +11,6 @@ include("Model/Company.php");
 include("Model/Testimonials.php");
 include("Controller/MainController.php");
 include("Controller/PagesController.php");
-include("Controller/FormsController.php");
 
 $routeComponents = isset($_GET['route'])?$_GET['route']:'pages.home';
 $route = explode('.', $routeComponents);

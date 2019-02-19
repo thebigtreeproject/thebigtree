@@ -25,7 +25,7 @@
 			else if(!empty($_SESSION['user'])){
 			?>
 				<a href="index.php?route=user.logout" class="btnlogin">Logout</a>
-				<a href="index.php?route=pages.dashboard&userID=<?=$_SESSION['user']['id']?>" class="btnjoin">Profile</a>
+				<a href="index.php?route=pages.dashboard" class="btnjoin">Profile</a>
 			<?php
 			}
 			?>

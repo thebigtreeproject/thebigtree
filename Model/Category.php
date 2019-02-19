@@ -4,6 +4,14 @@
 			$sql = "SELECT * FROM categories";
 			return DB::con()->runSQL("getAllData", $sql);
 		}
+		static function getCategoriesForForm(){
+			$sql = "SELECT
+				categories.id,
+				categories.strName
+			FROM
+				categories";
+			return DB::con()->runSQL("getAllData", $sql);
+		}
 		static function getAllServices($nCatID){
 			$sql = "SELECT 
 				companies.id,

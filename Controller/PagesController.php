@@ -95,7 +95,8 @@
 			if($this->userLoged === true){
 				$arrData['user'] = $_SESSION['user'];
 				$arrData['userCompanies'] = Companies::getUserCompanies($_SESSION['user']['id']);
-				if($arrData['user'] && $arrData['userCompanies']){
+				$arrData['categories'] = Category::getCategoriesForForm();
+				if($arrData['user']){
 					$content = $this->loadView("dashboard", $arrData);
 				}
 				include("Views/publiclayout-view.php");
@@ -117,12 +118,6 @@
 			include("Views/publiclayout-view.php");
 		}
 		
-		public function registerservice(){
-			$arrCategories = Category::getAllCategories();
-			$content = $this->loadView("registerservice", $arrCategories);
-			include("Views/publiclayout-view.php");
-		}
-
 		public function editprofile()
 		{	
 			$content = $this->loadView("editProfile");

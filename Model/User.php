@@ -31,6 +31,33 @@
 				}
 			}
 		}
+
+		static function get($userID)
+		{
+			// get the user informations
+			$sql = "SELECT * FROM users WHERE users.id='".$userID."'";
+			return $userID = DB::con()->runSQL("getSingleData", $sql);
+		}
+
+		static function update()
+		{
+			// insert the new user information
+			$sql = "UPDATE users SET
+					strFirstName='".addslashes(utf8_encode($_POST['strFirstName']))."',
+					strLastName='".addslashes(utf8_encode($_POST['strLastname']))."',
+					strEmail='".addslashes(utf8_encode($_POST['strEmail']))."',
+					strZipCode='".addslashes(utf8_encode($_POST['strZipCode']))."',
+					strAddress='".addslashes(utf8_encode($_POST['strAddress']))."'
+				WHERE
+					users.id='".$_SESSION['user']['id']."'";
+			
+			$userID = DB::con()->runSQL("update", $sql);
+			
+			$user = self::get($_SESSION['user']['id']);
+			$_SESSION['user'] = $user;
+
+			header('location: ./?route=pages.dashboard&success=profileupdate');
+		}
 		
 		static function confirm(){
 			$confInfo = explode('.', $_GET['cd']);
@@ -80,16 +107,6 @@
 			echo DB::con()->runSQL("insertNew", $sql);
 			echo $sql;
 			die;
-		}
-		
-		static function getMemberInfo($arrItems){
-			// insert SQL to get information to fill forms
-			return DB::con()->runSQL("getSingleData", $sql);	
-		}	
-		
-		static function getMemberPurchase(){
-			// get alll purchase linked to this user
-			return DB::con()->runSQL("getAllData", $sql);	
 		}
 		
 		static function send_confirmation_on_email($code){

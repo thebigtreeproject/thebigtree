@@ -408,7 +408,22 @@ footer {
     transform:translateY(-15px);
 }
 /**********HOME PAGE*************/
-
+.hero-video video{  
+  width: 100%;
+}
+.hero-video video+span{  
+  display: inline-block;
+  position: absolute;
+  width: 30%;
+  height: 400px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 50%;
+  margin: auto;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
 .heroImage{
     margin:20px 0;
 }
@@ -958,7 +973,7 @@ a.btn.alpha-filter:hover{
 div#dashboard-nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 10px 15%;
+  padding: 10px 0;
 }
 div#dashboard-nav .dashboard-options>a>h3 {
   display: inline;
@@ -967,13 +982,113 @@ div#dashboard-nav a {
   margin: 0;
 }
 div#dashboard-content{
-text-align: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  min-height: 700px;
 }
+#dashboard-slideholder{
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  left: 0;
+  top: 0;
+  width: 300%;
+  transition: left 0.4s ease;
+}
+#dashboard-slideholder>*{
+  margin-top: 30px;
+  width: 33%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+#dashboard-slideholder>* h2 {
+  margin-top: 0;
+}
+div#dashboard-content .update-user,
+#service-form
+{
+  background: #008080;
+  color: #ffffff;
+  padding: 30px;
+  width: 400px;
+  text-align: left;
+  height: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#service-form{
+  width: 750px;
+}
+
+div#dashboard-content .update-user label,
+#service-form label
+{
+  display: block;
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+div#dashboard-content .update-user input,
+#service-form input,
+#service-form textarea
+{
+  height: 40px;
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+#service-form span.formsection{
+  float: left;
+  width: 50%;
+  position: relative;
+  padding: 15px;
+}
+
+#service-form input[type="checkbox"]{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+  margin: 6px 0;
+}
+#service-form input[type="file"] + span{
+  display: inline-block;
+  height: 60px;
+}
+#service-form input[type="file"] + span > img{
+  height: 100%;
+}
+
+#service-form textarea{
+  height: 100px;
+}
+
+div#dashboard-content .update-user input[type='submit'],
+#service-form input[type='submit']
+{
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  font-size: 20pt;
+  margin-top: 30px;
+  background-color: #ffffff;
+  color: #008080;
+}
+
 .usercompanies-list{
-display: inline-block;
-width: 500px;
-margin: 40px auto;
+  display: inline-block;
 }
+
 .usercompanies-list li{
 position: relative;
 text-align: left;
