@@ -29,6 +29,14 @@
 			<?php
 			}
 			?>
+		</div>		
+		<div id="hamburger-icon">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
 		</div>
 		<div class="nav nav-header">
 			<nav>
@@ -40,14 +48,6 @@
 					<li><a href="index.php?route=pages.contact">Contact</a></li>
 				</ul>
 			</nav>
-		</div>
-		<div id="hamburger-icon">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
 		</div>
 	</div>
 </header>
