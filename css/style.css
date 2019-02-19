@@ -127,6 +127,11 @@ nav li a{
 /* hamburger style */
 div#hamburger-icon {
   display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -139,6 +144,7 @@ div#hamburger-icon {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+  z-index: 999;
 }
 div#hamburger-icon span {
   display: block;
@@ -533,7 +539,7 @@ footer {
   font-size:25pt;
   color:#ffffff;
   font-family:'Merriweather', serif;
-   padding:20px;
+  padding:20px;
 }
 
 .services-container{
@@ -939,13 +945,17 @@ div.info-text {
 }
 
 div.info-text p{
-  width:80%;
-  font-size:20px;
-  line-height:30px;
+  font-size:30px;
+  line-height:40px;
   font-family:'lato', sans-serif;
-  margin:20px 0;
   margin-left:150px;
-  margin-bottom:50px;   
+  margin-bottom:50px; 
+  font-weight:500;  
+}
+
+.services-name{
+  font-size:30px;
+  color:#008080;
 }
 
 /***** COMPANIES LIST ON CATEGORY PAGE *******/
@@ -960,21 +970,21 @@ ul.complist{
 
 #category-class p{
   margin:20px 0px;
-  font-size:15pt;
+  font-size:20pt;
   font-family:'lato', sans-serif;
-  font-weight:bold;
-  color:#008080;
+  color:#000000;
 }
 
 a.btn.alpha-filter{
   font-size:25pt;
-  color:#000000;
+  color:#008080;
   font-family:'lato', sans-serif;
+  margin-left:25px;
 }
 
 a.btn.alpha-filter:hover{
   border-bottom:4px solid #008080;
-  color:#008080;
+  color:#000000;
 }
 
 /***** DASH BOARD STYLE ON DASHBOARD PAGE ******/
@@ -1138,3 +1148,31 @@ transform: scale(1.1);
 }
 
 /******* ENDO OF DASH BOARD STYLE ON DASHBOARD PAGE ******/
+
+@media only screen and (max-width: 600px){
+  div#hamburger-icon {
+    display: block;
+  }
+  .nav-header{
+    position: relative;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    top: 0;
+    transition: all 0.5s ease;
+  }
+  .nav-header li{
+    display: block;
+    margin: 0 auto;
+  }
+  div#hamburger-icon.open + .nav-header{
+    /* the plus selector select any ".nav-header" that come after a "div#hamburger-icon.open" 
+    see sibling selector for CSS*/
+    max-height: 300px;
+    transition: all 0.6s ease;
+  }
+  div#hamburger-icon.open + .nav-header li{
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -1,9 +1,8 @@
 <div class="thankyouContainer">
 	<div class="thankyouView">
-		<h2>Thankyou for your order!</h2>
-		<p>Your Payment was successfully submitted.</p>
-		<p>We will send your confirmation to the email address provided.</p>
-		<img src="assets/thankYouDog.png" alt="thankyou dog">
+		<h2>Thankyou!</h2>
+		<p>Thank you for contacting us. We will get back to you as soon as possible.</p>
+		<img src="icon/logo.png" alt="bigtree logo">
 	</div><!--thankyouView-->
 	<?=$arrData?>
 </div><!--thankyouContainer-->
