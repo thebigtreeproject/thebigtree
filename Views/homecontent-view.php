@@ -4,7 +4,7 @@
 		Your browser does not support the video tag.
 	</video>
 	<span class="containBg">
-		<img width="100" height="100" src="icon/logo.png" alt="The Big Tree Logo">
+		<img width="100" height="100" src="icon/bigtreecover.png" alt="The Big Tree Logo">
 	</span>
 </section>
 <section id="about">
