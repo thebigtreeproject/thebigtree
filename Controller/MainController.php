@@ -43,15 +43,19 @@
 			if($this->userLoged === true){
 				switch ($action){
 					case 'save':
+						//save new company
 						Company::save();
+						break;
+					case 'update':
+						//run update function
+						Company::update();
 						break;
 					case 'activate':
 						Company::confirm();
 						break;
 					case 'editcompany':
-						$nCompanyID = $_POST['svcid'];
-						$nUserID = $_SESSION['user']['id'];
-						Company::getForForm($nCompanyID, $nUserID);
+						//get company informations to place in the form
+						Company::getForForm();
 						break;
 					default:
 						break;

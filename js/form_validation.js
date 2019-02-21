@@ -13,19 +13,21 @@ $(function(){
 			}
 			else if(field.is("div")){
 				let checked = 0;
-				field.children().each( function() {
-					if(!$(this).is("input:checked")){
-						field.addClass('empty');
+				field.find('li input').each( function() {
+					if($(this).is("input:checked")){
+						checked++;
+						field.removeClass('empty');
 					}
 					else{
-						checked++;
+						field.addClass('empty');
 					}
 				});
 				if(checked === 0){
 					missing++;
+					console.log(missing);
+					console.log(checked);
 				}
 			}
-			console.log(missing);
 		});
 		if(missing===0){
 			event.preventDefault;

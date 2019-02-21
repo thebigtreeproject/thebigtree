@@ -1,4 +1,4 @@
-<form method="post" action="index.php?route=company.save" onsubmit="return validate()" enctype="multipart/form-data">
+<form method="post" action="index.php?route=company.save" enctype="multipart/form-data">
 	<input type="hidden" name="nUserID" value="<?=$arrData['user']['id'];?>">
 	
 	<span class="formsection">

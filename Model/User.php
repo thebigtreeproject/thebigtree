@@ -3,35 +3,47 @@
 	{
 		static function save()
 		{
-			// insert the new user information
-			$sql = "INSERT INTO users (
-					strFirstName,
-					strLastName,
-					strEmail,
-					strZipCode,
-					strAddress,
-					strPassword,
-					bActivated)
-				VALUES (
-					'".addslashes(utf8_encode($_POST['strFirstName']))."', 
-					'".addslashes(utf8_encode($_POST['strLastname']))."',
-					'".addslashes(utf8_encode($_POST['strEmail']))."',
-					'".addslashes(utf8_encode($_POST['strZipCode']))."',
-					'".addslashes(utf8_encode($_POST['strAdress']))."',
-					'".password_hash($_POST['strPassword'], PASSWORD_DEFAULT)."',
-					0)";
-			$userID = DB::con()->runSQL("insertNew", $sql);
-			$_SESSION['userInfo'] = $_POST;		
-			$_SESSION['userInfo']['id'] = $userID;		
-			$code = Code::saveCode();
-			if($code){
-				$emailSent = self::send_confirmation_on_email($code);
-				if($emailSent){
-					header('location: index.php?route=pages.home');
+			//check if the email is already in use
+			$emailInUse = self::checkEmailInUse(utf8_encode($_POST['strEmail']));
+			if(!$emailInUse){	
+				// insert the new user information
+				$sql = "INSERT INTO users (
+						strFirstName,
+						strLastName,
+						strEmail,
+						strZipCode,
+						strAddress,
+						strPassword,
+						bActivated)
+					VALUES (
+						'".addslashes(utf8_encode($_POST['strFirstName']))."', 
+						'".addslashes(utf8_encode($_POST['strLastname']))."',
+						'".addslashes(utf8_encode($_POST['strEmail']))."',
+						'".addslashes(utf8_encode($_POST['strZipCode']))."',
+						'".addslashes(utf8_encode($_POST['strAdress']))."',
+						'".password_hash($_POST['strPassword'], PASSWORD_DEFAULT)."',
+						0)";
+				$userID = DB::con()->runSQL("insertNew", $sql);
+				$_SESSION['userInfo'] = $_POST;		
+				$_SESSION['userInfo']['id'] = $userID;		
+				$code = Code::saveCode();
+				if($code){
+					$emailSent = self::send_confirmation_on_email($code);
+					if($emailSent){
+						header('location: index.php?route=pages.home');
+					}
 				}
 			}
+			else{
+				header('location: index.php?route=pages.login&error=email');
+			}
 		}
-
+		static function checkEmailInUse($email){
+			$sql = "SELECT users.strEmail FROM users WHERE users.strEmail='".$email."'";
+			$arrEmails = DB::con()->runSQL("getSingleData", $sql);
+			$inUSe = ($arrEmails) ? true : false;
+			return $inUSe;
+		}
 		static function get($userID)
 		{
 			// get the user informations
@@ -92,7 +104,7 @@
 				header('location: ./');
 			}
 			else{
-				header('location: ./?route=pages.login&loginErr=true');
+				header('location: ./?route=pages.login&error=login');
 			}
 		}
 

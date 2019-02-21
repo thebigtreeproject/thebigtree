@@ -53,6 +53,13 @@ a.btnlogin{
   font-family: 'Merriweather', serif;
 }
 
+div.error{
+  background: #ff6347;
+  font-weight: 600;
+  text-align: center;
+  font-size: 18px;
+  padding: 7px 0;
+}
 
 a.btnjoin{
   color:#ffffff;/*white*/
@@ -1880,7 +1887,7 @@ div.info-text p{
 }
 
 @media only screen and (max-width: 500px) {
-//*HOME PAGE RESPONSIVE*/
+/*HOME PAGE RESPONSIVE*/
 
 /*header*/
 #logo
