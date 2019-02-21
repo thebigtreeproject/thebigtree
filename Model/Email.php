@@ -3,6 +3,7 @@
 		static function registerConfirtmation($code){
 		   $to = $_SESSION['userInfo']['strEmail'];
 
+
 			$subject = 'Email confirmation';
 			
 			ob_start();
@@ -11,8 +12,6 @@
 			$message = ob_get_contents();
 			ob_clean();
 			
-			echo $message;
-			die;
 			
 			$email_from = "Testing";
 			$full_name = 'The Big Tree';
@@ -23,6 +22,8 @@
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 			$headers .= 'From: ' . $from_email . "\r\n";       
 			mail($to,$subject,$message,$headers);
+
+			return true;
 		}
 	}
 ?>

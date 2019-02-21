@@ -27,7 +27,7 @@
 			if($code){
 				$emailSent = self::send_confirmation_on_email($code);
 				if($emailSent){
-					header('location: index.php/router=pages.home');
+					header('location: index.php?route=pages.home');
 				}
 			}
 		}
@@ -110,7 +110,10 @@
 		}
 		
 		static function send_confirmation_on_email($code){
-			Email::registerConfirtmation($code);
+			$emailSent = Email::registerConfirtmation($code);
+			if($emailSent){
+				return true;
+			}
 		}
 	}
 ?>
