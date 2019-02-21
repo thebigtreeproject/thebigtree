@@ -21,7 +21,7 @@ include("Views/border-view.php")
                 <h2>Companies</h2>
                 <p>Registering is not hard, by having your company sign with us it can help people with special needs find you easily.</p>
              </span>
-               <a href="#" class="btn3">Sign Up</a>
+               <a href="index.php?route=pages.login" class="btn3">Sign Up</a>
 		</div>
 		<div>
             <span class="grey-overlay">
@@ -29,7 +29,7 @@ include("Views/border-view.php")
                 <h2>Clients</h2>
                 <p>It can be time consuming to find any service you want. TheBigTree is here for you. All the service you need in one place.</p>
             </span>
-               <a href="#" class="btn3">Service</a>       
+               <a href="index.php?route=pages.services" class="btn3">Service</a>       
 		</div>     
 	</div>
 </section>

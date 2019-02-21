@@ -4,7 +4,7 @@
 		Your browser does not support the video tag.
 	</video>
 	<span class="containBg">
-		<img width="100" height="100" src="icon/logo.png" alt="The Big Tree Logo">
+		<img width="100" height="100" src="icon/bigtreecover.png" alt="The Big Tree Logo">
 	</span>
 </section>
 <section id="about">
@@ -15,7 +15,7 @@
 		<div class="blackbox">
 			<h1>About Us</h1>
 			<p>TheBigTree website was made possible by three people that wanted to make a difference for the disabled community.  We know that it can be frustrating to find the right place for your need. Here at TheBigTree, the service is looking for you. All the service you need in one place.</p>
-			<a href="#" id="btn">Learn More</a>
+			<a href="index.php?route=pages.about" id="btn">Learn More</a>
 		</div>
 	</div>
 </section>
