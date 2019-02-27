@@ -1035,6 +1035,10 @@ div#dashboard-content{
   display: flex;
   justify-content: center;
 }
+#dashboard-slideholder>*:nth-child(2){
+	height: 100%;
+	overflow: scroll;
+}
 #dashboard-slideholder>* h2 {
   margin-top: 0;
 }
