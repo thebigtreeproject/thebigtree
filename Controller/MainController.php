@@ -46,6 +46,10 @@
 						//save new company
 						Company::save();
 						break;
+					case 'delete':
+						//save new company
+						Company::delete();
+						break;
 					case 'update':
 						//run update function
 						Company::update();

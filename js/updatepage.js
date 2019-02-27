@@ -74,12 +74,39 @@
         };
         $.ajax(options);
     };
+    const deleteService = serviceID => {
+        const options = {
+            url: 'index.php?route=company.delete',
+            method: 'POST',
+            data: {
+                svcid : serviceID
+            },
+            success: () => {
+                console.log('Company deleted!');
+            },
+            error: (err) => {
+                console.log(`AJAX error: ${err}`);
+            }
+        };
+        $.ajax(options);
+    };
     const listItems = document.getElementsByClassName('user-services');
     for(var i = 0; i < listItems.length; i++){
-        listItems[i].addEventListener('click', (e) => {            
+        listItems[i].addEventListener('click', (e) => {
             e.preventDefault();
             var element = e.currentTarget;
             var serviceId = element.getAttribute('data-companyid');
+            if(element.classList.contains('delete')){                
+                if(confirm('Are you sure that you want to dele this company permanently?')){
+                    document.querySelectorAll('.usercompanies-list ul li').forEach( (el) => {
+                        if(el.querySelector('.delete').getAttribute('data-companyid') == serviceId){
+                            el.remove();
+                        }
+                    });
+                }
+                deleteService(serviceId);
+                return;
+            }          
             getServiceInfo(serviceId);
         });
     }

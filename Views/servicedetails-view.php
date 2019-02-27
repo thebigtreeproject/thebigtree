@@ -11,10 +11,10 @@
 	<div class="features">
 		<h1>FEATURES</h1>
 		<ul>
-			<li>&#9679; After color services</li>
-			<li>&#9679; Blow outs</li>
-			<li>&#9679; Make up</li>
-			<li>&#9679; Wedding</li>
+			<li>&#9679; First Aid Knowledge</li>
+			<li>&#9679; Quick Service</li>
+			<li>&#9679; Sign Language Interpreter</li>
+			<li>&#9679; Accessibility</li>
 		</ul>
 		<a href="#">VISIT SITE</a>
 	</div><!--features-->

@@ -97,13 +97,23 @@ Class Company{
 		}
 		die;
 	}
+	
+	static function delete(){
+		$nCompanyID = $_POST['svcid'];
+		$nUserID = $_SESSION['user']['id'];
+
+		$comapny = self::getOne($nCompanyID);
+		if($comapny['nUserID'] == $nUserID){
+			$sql= "DELETE FROM companies WHERE companies.id='".$nCompanyID."'";
+			DB::con()->runSQL("delete", $sql);
+		}
+	}
 
 	static function update(){
 		$nCompanyID = $_SESSION['updatingCompanyID'];
 		//find the id of the owner of the company
 		$sql = "SELECT companies.nUserID FROM companies WHERE companies.id ='".$nCompanyID."'";
-		$ownerID = DB::con()->runSQL("getSingleData", $sql);		
-		echo 'owner -->'.$sql;
+		$ownerID = DB::con()->runSQL("getSingleData", $sql);
 		//get the id of the user that is loged
 		$userID = $_SESSION['user']['id'];
 
@@ -119,8 +129,7 @@ Class Company{
 				nPrice ='".utf8_encode($_POST["nPrice"])."'
 				WHERE
 				companies.id = $nCompanyID";
-			DB::con()->runSQL("update", $sql);			
-			echo 'new infos -->'.$sql;
+			DB::con()->runSQL("update", $sql);
 
 			//if logo changed save the new file and update the name
 			if(!empty($_FILES["strLogoFile"]['name'])){
@@ -134,7 +143,6 @@ Class Company{
 					WHERE
 						companies.id = $nCompanyID";
 					DB::con()->runSQL("update", $sql);
-					echo 'new logo -->'.$sql;
 				}
 			}
 
@@ -150,15 +158,13 @@ Class Company{
 					WHERE
 						companies.id = $nCompanyID";
 					DB::con()->runSQL("update", $sql);
-					echo 'new cover -->'.$sql;
 				}
 			}
 
 			//update midtable
 			//clean the old records 
 			$sql = "DELETE * FROM companies_categories WHERE nCompanyID='".$nCompanyID."'";
-			DB::con()->runSQL("delete", $sql);			
-			echo 'delete categories -->'.$sql;
+			DB::con()->runSQL("delete", $sql);
 
 			//insert new data
 			$valuesToInsert = "";
@@ -169,7 +175,6 @@ Class Company{
 					VALUES".$valuesToInsert ;
 
 			DB::con()->runSQL("insertNew", $sql);
-			echo 'new categories -->'.$sql;
 
 			//clean the id of the company from the session
 			$_SESSION['updatingCompanyID'] = '';

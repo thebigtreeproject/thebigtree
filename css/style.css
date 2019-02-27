@@ -803,6 +803,16 @@ section.testimslider{
   margin-bottom:100px;
   color:#008080;
 }
+.thankyouView p{
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.thankyouView a{
+  display: block;
+  width: 118px;
+  margin: auto;
+}
 #contactForm input::placeholder{
   color:#686868/*grey*/
 }
@@ -1161,6 +1171,9 @@ width: 100px;
 padding: 10px;
 border: none;
 color: #008080;
+}
+.usercompanies-list li> a.delete{
+  color: #ff6347;
 }
 .usercompanies-list li> a:hover{
 transform: scale(1.1);

@@ -4,7 +4,8 @@
 		public function loadView($viewName ,$arrData= "")
 		{
 			ob_start();
-			echo "<!-- OB from Views/$viewName-view.php --> \n";
+//			While developing, uncoment the line 8 to have orientation about where to find the view
+//			echo "<!-- OB from Views/$viewName-view.php --> \n";
 			include("Views/".$viewName."-view.php");
 			$viewContent = ob_get_contents();
 			ob_clean();
@@ -66,7 +67,7 @@
 			$arrData['service'] = Company::getOne($nCompanyID);
 			$arrData['modalcontent'] = $this->loadView("servicedetails", $arrData['service']);
 			
-			echo $this->loadView("modalholder", $arrData['modalcontent']);
+			echo $this->loadView("modalHolder", $arrData['modalcontent']);
 		}
 
 		public function testimonials()
@@ -124,13 +125,10 @@
 			include("Views/publiclayout-view.php");
 		}
 
-		public function test(){//services page
-			$nCompanyID = isset($_GET['serviceID'])?$_GET['serviceID']:'';
-			$arrData['service'] = Company::getOne($nCompanyID);
-			$arrData['modalcontent'] = $this->loadView("servicedetails", $arrData['service']);
+		public function thankyoupage(){
+			$arrData['modalcontent'] = $this->loadView("thankyouPage");
 			
-			$content = $this->loadView("modalholder", $arrData['modalcontent']);
-			include("Views/publiclayout-view.php");
+			echo $this->loadView("modalHolder", $arrData['modalcontent']);
 		}
 
 	}

@@ -64,6 +64,7 @@
 								<p><?=$company['strAddress']?></p>
 							</div>
 							<a href="#" class="user-services" data-companyid="<?=$company['id']?>">Edit <span class="fas fa-edit"></span></a>
+							<a href="#" class="user-services delete" data-companyid="<?=$company['id']?>">Delete <span class="fas fa-times-circle"></span></a>
 						</li>
 	<?php
 			}
